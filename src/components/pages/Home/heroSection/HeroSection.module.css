@@ -1,0 +1,155 @@
+.aiGeneratedImages,
+.herosectionChild {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.aiGeneratedImages {
+  letter-spacing: 0.04em;
+  line-height:3.5rem;
+  font-weight: 300;
+  display: inline-block;
+  width: 22rem;
+}
+.aiGeneratedImagesWrapper {
+  position: absolute;
+  height: 12.89%;
+  width: 17.86%;
+  top: 52.94%;
+  right: 10.99%;
+  bottom: 34.17%;
+  left: 71.15%;
+  font-size: 3rem;
+}
+.a {
+  color: #eecea5;
+}
+.a,
+.k,
+.r,
+.w {
+  margin: 0;
+}
+.k,
+.w {
+  color: #edcda2;
+}
+.k {
+  color: #eccb9c;
+}
+.artwork,
+.mAKContainer {
+  position: absolute;
+  height: 54.34%;
+  width: 3.54%;
+  top: 20rem;
+  left: 17.4%;
+  line-height: 3.5rem;
+  text-align: center;
+  display: inline-block;
+  color: #020202;
+}
+.mAKContainer {
+  height: 84.69%;
+  width: 4.58%;
+  top: 8.03%;
+  left: 10.63%;
+  color: #000;
+}
+.startNowButtonChild {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.startNow,
+.startNowButton {
+  position: absolute;
+  top: 13.56%;
+  left: 29.23%;
+}
+.startNowButton {
+  height: 5.51%;
+  width: 18.18%;
+  top: 92.72%;
+  right: 40.94%;
+  bottom: 1.77%;
+  left: 40.89%;
+  font-size: 1.875rem;
+  color: #fff;
+}
+.herosection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  text-align: left;
+  font-size: 3rem;
+  color: #7b7b7b;
+  font-family: 'Poppins';
+  margin-top: -7rem;
+  background-image: url('../../../../assets/images/rectangle-30705@2x.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+}
+.startNowbtn{
+  background: black;
+    color: #fff;
+    height: 2rem;
+    width: 13rem;
+    font-size: 1rem;
+    font-weight: 100;
+    align-self: flex-end;
+    border: none;
+    z-index: 9;
+    margin-bottom: 1rem;
+    /* border-radius: 4px; */
+}
+/* responsive  */
+@media screen and (max-width: 1600px) {
+  html{
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 1181px) {
+  html{
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 964px) {
+  html{
+    font-size: 70%;
+  }
+  .herosection{
+    height: 85vh;
+  }
+}
+@media screen and (max-width: 915px) {
+  html{
+    font-size: 60%;
+  }
+  .herosection{
+    height: 70vh;
+  }
+  .aiGeneratedImages {
+    display: none;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,87 @@
+.rk {
+    color: #000;
+  }
+  .creating {
+    position: absolute;
+    height: 11.56%;
+    width: 28.07%;
+    top: 5.07%;
+    left: 4.79%;
+    display: inline-block;
+  }
+  .start {
+    position: absolute;
+    top: 0;
+    left: 5.61%;
+    font-size: 45px;
+    color: #000;
+  }
+  .enhanceArtworkChild,
+  .enhanceArtworkItem {
+    position: absolute;
+    top: 181px;
+    left: 924px;
+    border-radius: 17px;
+    width: 893px;
+    height: 696px;
+    object-fit: cover;
+  }
+  .enhanceArtworkItem {
+    top: 169px;
+    left: -12px;
+    width: 917px;
+    height: 720px;
+  }
+  .groupChild {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .generate {
+    position: absolute;
+    width: 38.83%;
+    top: 20.34%;
+    left: 30.58%;
+    font-weight: 500;
+    display: inline-block;
+  }
+  .vectorParent {
+    position: absolute;
+    height: 5.98%;
+    width: 20.69%;
+    top: 94.02%;
+    right: 39.68%;
+    bottom: 0;
+    left: 39.63%;
+    font-size: 24px;
+    color: #fff;
+  }
+  .enhanceArtwork {
+    position: absolute;
+    height: 89.64%;
+    width: 94.64%;
+    top: 5.18%;
+    right: 2.71%;
+    bottom: 5.18%;
+    left: 2.66%;
+  }
+  .enhanceartwork {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 1100px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 66px;
+    color: #adadad;
+    font-family: Poppins;
+  }
+  

@@ -1,0 +1,27 @@
+.App{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.active{
+    color: #000000 !important;
+    position: relative;
+}
+.active:before {
+    content: "*";
+    color: black;
+    position: absolute;
+    bottom: -1rem;
+    /* left: 1.5rem; */
+    left: 50%;
+   transform: translateX(-50%);
+  }
+  .navbar-toggler-icon{
+    display: none;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  

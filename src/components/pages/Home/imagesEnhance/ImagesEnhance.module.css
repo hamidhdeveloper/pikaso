@@ -1,0 +1,80 @@
+.imagesenhanceChild {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 1920px;
+    height: 1080px;
+  }
+  .aiAllRights,
+  .imagesEnhance {
+    position: absolute;
+    top: 89.26%;
+    left: 43.07%;
+  }
+  .imagesEnhance {
+    top: 104px;
+    left: 99px;
+    font-size: 30px;
+  }
+  .imageCreatedChild,
+  .imageCreatedItem {
+    position: absolute;
+    top: 0;
+    left: 595px;
+    width: 387px;
+    height: 374px;
+    object-fit: cover;
+  }
+  .imageCreatedItem {
+    left: 976px;
+    width: 807px;
+  }
+  .imageCreatedChild1,
+  .imageCreatedInner,
+  .rectangleIcon {
+    position: absolute;
+    top: 374px;
+    left: 1116px;
+    width: 360px;
+    height: 287px;
+    object-fit: cover;
+  }
+  .imageCreatedChild1,
+  .rectangleIcon {
+    left: 1484px;
+    width: 299px;
+  }
+  .imageCreatedChild1 {
+    top: 0;
+    left: 0;
+    width: 597px;
+    height: 661px;
+  }
+  .imageCreated {
+    position: absolute;
+    top: 210px;
+    left: 69px;
+    width: 1783px;
+    height: 661px;
+  }
+  .imagesenhanceItem {
+    position: absolute;
+    top: 584px;
+    left: 666px;
+    width: 519px;
+    height: 287px;
+    object-fit: cover;
+  }
+  .imagesenhance {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 1080px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 15px;
+    color: #000;
+    font-family: Poppins;
+  }
+  
