@@ -15,6 +15,9 @@
   .owntop{
     display: flex;
     flex-direction: column;
+    padding: 0rem 5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
     /* height: 15rem; */
     width: 100%;
     /* background-color: red; */
@@ -22,7 +25,7 @@
   .owntop b{
     display: flex;
     align-items: center;
-    margin-left: 8rem;
+    /* margin-left: 8rem; */
   }
   .start{
     font-size: 2.5rem;
@@ -98,11 +101,13 @@
     .ownbottomLeft,.ownbottomRight{
         width: 91vw;
         text-align: center;
+        padding: 3rem 3rem;
     }
     .owntop{
         flex-direction: row;
         justify-content: center;
         align-items: flex-end;
+        padding-top: 4rem;
     }
     .owntop b{
         margin-left: 0;

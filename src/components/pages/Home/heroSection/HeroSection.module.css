@@ -43,7 +43,7 @@
   position: absolute;
   height: 54.34%;
   width: 3.54%;
-  top: 20rem;
+  top: 25rem;
   left: 17.4%;
   line-height: 3.5rem;
   text-align: center;
@@ -115,7 +115,7 @@
     align-self: flex-end;
     border: none;
     z-index: 9;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     /* border-radius: 4px; */
 }
 /* responsive  */
