@@ -5,7 +5,6 @@ import CreateYourOwn from './createOwn/CreateYourOwn'
 import EnhanceArtwork from './enhanceArtwork/EnhanceArtwork'
 import ImageCreated from './imageCreated/ImageCreated'
 import ImagesEnhance from './imagesEnhance/ImagesEnhance'
-import Footer from '../../Footer/Footer'
 
 const Home = () => {
   return (
@@ -16,7 +15,6 @@ const Home = () => {
     <EnhanceArtwork />
     <ImageCreated />
     <ImagesEnhance />
-    <Footer />
     </>
   )
 }
