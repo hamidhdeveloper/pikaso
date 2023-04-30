@@ -7,31 +7,36 @@ import logo from '../../assets/images/logo.png'
 import styles from "./Header.module.css";
 import group from '../../assets/images/group-9244.svg'
 import ellipse from '../../assets/images/ellipse-4.svg'
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation();
+  const startCreating = location.pathname === '/startcreating';
+  console.log('current ',location.pathname)
+  console.log('my one ',startCreating)
   return (
     <>
        {[false].map((expand) => (
         <Navbar key={expand} bg="light" expand={expand} className={`${styles.navBackground} mb-3`} style={{zIndex: '98',background: 'none'}}>
           <Container fluid>
             
-            <Navbar.Brand href="#"><img src={logo} alt='logo' className={styles.logo} /></Navbar.Brand>
+            <Navbar.Brand href="#" ><img src={logo} alt='logo' className={`${styles.logo} ${startCreating ? styles.inverted : ''}`} /></Navbar.Brand>
             <Nav
-            className={`${styles.mynav} d-none d-md-block`}
-          >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">About</Nav.Link>
-            <Nav.Link href="#action3">How its work</Nav.Link>
+            className={`${styles.mynav} d-none d-md-block`} 
+          > 
+            <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
+            <Link to="about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
+            <Link to="howitswork" className={location.pathname === '/howitswork' ? 'active' : ''}>How its work</Link>
             
             
           </Nav>
             <div className={styles.headerRight}>
               <div className={styles.cartIcons}>
-              <img className={styles.groupChild} alt="" src={group} />
+              <img className={`${styles.groupChild} ${startCreating ? styles.inverted : ''}`} alt="" src={group} />
         <img className={styles.groupItem} alt="" src={ellipse} />
         <div className={styles.count}>1</div>
               </div>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className={styles.customTogglerIcon}/>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className={`${styles.customTogglerIcon} ${startCreating ? styles.inverted : ''}`}/>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}

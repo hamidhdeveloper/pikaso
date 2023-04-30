@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./HeroSection.module.css";
 // import rectangle from '../../../../assets/images/rectangle-30705@2x.png'
 // import rectangle3 from '../../../../assets/images/rectangle-3.svg'
@@ -32,7 +33,7 @@ const HeroSection = () => {
         <p className={styles.r}>w</p>
         <p className={styles.r}>n</p>
       </div>
-      <button className={styles.startNowbtn}>start now</button>
+      <Link to="startcreating" className={styles.startNowbtn}>start now</Link>
       {/* <div className={styles.startNowButton}>
         <img
           className={styles.startNowButtonChild}

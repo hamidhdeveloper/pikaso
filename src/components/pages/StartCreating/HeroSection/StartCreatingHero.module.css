@@ -1,5 +1,4 @@
-  .startCreatingContainer{
-    height: 26rem;
+  .startCreatingContainer {
     overflow: hidden;
     text-align: left;
     font-size: 6.56rem;
@@ -10,30 +9,34 @@
     background-position: center;
     object-fit: cover;
     background-size: cover;
+    margin-top: -7rem;
+    padding: 5rem 0rem;
   }
-  .startCreatingContainer div{
+
+  .startCreatingContainer div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .startCreatingText{
-   
-  }
-  .justWriteWhatText{
+
+  .startCreatingText {}
+
+  .justWriteWhatText {
     text-align: center;
     font-size: 2.13rem;
     font-weight: 500;
   }
+
   /* responsive */
   @media (max-width: 315px) {
-    html{
-        font-size: 40%;
+    html {
+      font-size: 40%;
     }
-    .startCreatingText{
-        text-align: center;
-        line-height: 6rem;
+
+    .startCreatingText {
+      text-align: center;
+      line-height: 6rem;
     }
-   
+
   }
-  
