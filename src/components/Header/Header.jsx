@@ -1,43 +1,62 @@
 import React from 'react'
-
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import logo from '../../assets/images/logo.png'
 import styles from "./Header.module.css";
-import vector from '../../assets/images/vector.svg'
-import path from '../../assets/images/path-9.svg'
 import group from '../../assets/images/group-9244.svg'
 import ellipse from '../../assets/images/ellipse-4.svg'
-
 
 const Header = () => {
   return (
     <>
-
-<div className={styles.header}>
-      <div className={styles.homeParent}>
-        <div className={styles.home}>
-          <p className={styles.p}>Home</p>
-          <p className={styles.p}>
-            <span>{`     `}</span>
-            <span className={styles.span}>*</span>
-          </p>
-        </div>
-        <div className={styles.about}>About</div>
-        <div className={styles.howItsWork}>How its work</div>
-      </div>
-      <div className={styles.logoParent}>
-        <div className={styles.logo}>
-          <img className={styles.vectorIcon} alt="" src={vector} />
-          <b className={styles.lo}>LO</b>
-          <b className={styles.go}>GO</b>
-        </div>
-        <img className={styles.path9Icon} alt="" src={path} />
-        <img className={styles.groupChild} alt="" src={group} />
+       {[false].map((expand) => (
+        <Navbar key={expand} bg="light" expand={expand} className={`${styles.navBackground} mb-3`} style={{zIndex: '98',background: 'none'}}>
+          <Container fluid>
+            
+            <Navbar.Brand href="#"><img src={logo} alt='logo' className={styles.logo} /></Navbar.Brand>
+            <Nav
+            className={`${styles.mynav} d-none d-md-block`}
+          >
+            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="#action2">About</Nav.Link>
+            <Nav.Link href="#action3">How its work</Nav.Link>
+            
+            
+          </Nav>
+            <div className={styles.headerRight}>
+              <div className={styles.cartIcons}>
+              <img className={styles.groupChild} alt="" src={group} />
         <img className={styles.groupItem} alt="" src={ellipse} />
-        <div className={styles.div}>1</div>
-      </div>
-    </div>
+        <div className={styles.count}>1</div>
+              </div>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className={styles.customTogglerIcon}/>
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                  Menu
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <ul>
+                  <li><a href='#action1'>History</a></li>
+                  <li><a href='#action1'>Payment method</a></li>
+                  <li><a href='#action1'>Cart</a></li>
+                </ul>
+                
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+            </div>
+          </Container>
+        </Navbar>
+      ))}
     </>
   )
 }
 
 export default Header
-

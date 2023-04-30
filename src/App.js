@@ -1,21 +1,23 @@
+import React from 'react'
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 import './App.css';
-import MyNavbar from './components/Navbar/MyNavbar';
-import CreateYourOwn from './components/pages/Home/createOwn/CreateYourOwn';
-import EnhanceArtwork from './components/pages/Home/enhanceArtwork/EnhanceArtwork';
-import HeroSection from './components/pages/Home/heroSection/HeroSection';
-import ImageCreated from './components/pages/Home/imageCreated/ImageCreated';
-import ImagesEnhance from './components/pages/Home/imagesEnhance/ImagesEnhance';
+import { Container } from 'react-bootstrap';
+import Home from './components/pages/Home/Home';
 
 function App() {
   return (
+    <BrowserRouter> 
+     <Container fluid style={{padding:0}}>
     <div className="App">
-      <MyNavbar />
-      <HeroSection />
-      <CreateYourOwn />
-      <EnhanceArtwork />
-      <ImageCreated />
-      <ImagesEnhance />
+    <Routes>
+        <Route path="/" element={ <Home /> } />
+        {/* <Route path="login" element={ <Login /> } /> */}
+       
+    </Routes>    
     </div>
+    </Container>
+    </BrowserRouter>
+      
   );
 }
 

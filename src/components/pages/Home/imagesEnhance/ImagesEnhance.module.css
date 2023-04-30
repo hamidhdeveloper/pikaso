@@ -1,5 +1,5 @@
 .imagesenhanceChild {
-    position: absolute;
+    position: absolute; 
     top: 0;
     left: 0;
     background-color: #fff;
@@ -77,4 +77,54 @@
     color: #000;
     font-family: Poppins;
   }
-  
+  .imagesenhanceContainer{
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: left;
+    font-size: 15px;
+    color: #000;
+    font-family: 'Poppins';
+  }
+  .imagesenhanceContainer div:nth-child(1){
+ /* background-color: yellow; */
+  }
+  .imagesenhanceContainer div:nth-child(2){
+   /* background-color: aqua; */
+  }
+  .imagesenhanceContainer div:nth-child(3){
+ /* background-color: orange; */
+  }
+  .imagesenhanceContainer div{
+    /* width: 33.3%; */
+    /* height: 100px; */
+    padding: 0;
+    margin: 0;
+  }
+  /* .img1{
+    width: 31vw;
+  }
+  .img2{
+    width: 22vw;
+  }
+  .img3{
+    width: 36vw;
+  }
+  */
+  .img4{
+    height: 48vh;
+  }
+  .img5{
+    height: 43vh;
+  } 
+  .AllRights{
+    text-align: center;
+    margin: 4rem 0rem;
+  }
+  .imagesEnhanceText{
+    font-size: 30px;
+    padding: 4rem 0rem;
+    display: flex;
+  }

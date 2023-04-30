@@ -149,6 +149,27 @@
   }
 }
 
+/* code here */
+.Herocontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  text-align: left;
+  font-size: 3rem;
+  color: #7b7b7b;
+  font-family: 'Poppins';
+  margin-top: -7rem;
+  background-image: url('../../../../assets/images/rectangle-30705@2x.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+}
 
 
 

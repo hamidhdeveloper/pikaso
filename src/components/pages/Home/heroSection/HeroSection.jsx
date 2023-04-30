@@ -3,6 +3,7 @@ import styles from "./HeroSection.module.css";
 // import rectangle3 from '../../../../assets/images/rectangle-3.svg'
 const HeroSection = () => {
   return (
+    <>
     <div className={styles.herosection}> 
       <div className={styles.aiGeneratedImagesWrapper}>
         <div
@@ -41,6 +42,8 @@ const HeroSection = () => {
         <div className={styles.startNow}>start now</div>
       </div> */}
     </div>
+    </>
+    
   );
 };
 

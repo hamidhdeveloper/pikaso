@@ -1,0 +1,205 @@
+.footrChild {
+    left: 0;
+    width: 120.33rem;
+    height: 30.94rem;
+  }
+  .company,
+  .footrChild,
+  .footrItem {
+    position: absolute;
+    top: 0;
+  }
+  .footrItem {
+    left: 79.14rem;
+    width: 41.17rem;
+    height: 30.94rem;
+    mix-blend-mode: normal;
+  }
+  .company {
+    left: 2.06rem;
+    line-height: 3.25rem;
+    display: inline-block;
+    width: 9.63rem;
+  }
+  .pricing {
+    margin-bottom: false;
+  }
+  .pricingTermsAndConditionsP {
+    margin: 0;
+    padding-left: 1.33rem;
+  }
+  .pricingTermsAndContainer {
+    position: absolute;
+    top: 5.25rem;
+    left: 0;
+    font-size: inherit;
+    line-height: 2.88rem;
+    font-weight: 500;
+    font-family: inherit;
+    display: inline-block;
+    width: 18.22rem;
+  }
+  .companyParent {
+    position: absolute;
+    top: 4.56rem;
+    left: 11rem;
+    width: 18.22rem;
+    height: 13.88rem;
+  }
+  .contactUsShareContainer,
+  .help {
+    position: absolute;
+    display: inline-block;
+  }
+  .help {
+    top: 0;
+    left: 2.06rem;
+    line-height: 3.25rem;
+    width: 4.74rem;
+  }
+  .contactUsShareContainer {
+    top: 5.25rem;
+    left: 0;
+    font-size: inherit;
+    line-height: 2.88rem;
+    font-weight: 500;
+    font-family: inherit;
+    width: 13.96rem;
+  }
+  .helpParent {
+    position: absolute;
+    top: 4.56rem;
+    left: 38.3rem;
+    width: 13.96rem;
+    height: 11rem;
+  }
+  .reportABugContainer,
+  .support {
+    position: absolute;
+    display: inline-block;
+  }
+  .support {
+    top: 0;
+    left: 2.2rem;
+    line-height: 3.25rem;
+    width: 8.18rem;
+  }
+  .reportABugContainer {
+    top: 5.25rem;
+    left: 0;
+    font-size: inherit;
+    line-height: 2.88rem;
+    font-weight: 500;
+    font-family: inherit;
+    width: 15.4rem;
+  }
+  .supportParent {
+    position: absolute;
+    top: 4.56rem;
+    left: 61.33rem;
+    width: 15.4rem;
+    height: 11rem;
+  }
+  .followUs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 3.25rem;
+    display: inline-block;
+    width: 9.76rem;
+  }
+  .arabyAiArabyAiArabyAi {
+    margin: 0;
+    padding-left: 1.35rem;
+  }
+  .arabyAiArabyContainer {
+    position: absolute;
+    top: 5.25rem;
+    left: 2.13rem;
+    font-size: inherit;
+    text-decoration: underline;
+    line-height: 4.06rem;
+    font-weight: 500;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    width: 10.25rem;
+  }
+  .instagramIcon,
+  .twitterIcon {
+    left: 0.28rem;
+    width: 1.93rem;
+    height: 1.75rem;
+  }
+  .instagramIcon {
+    position: absolute;
+    top: 6.63rem;
+    overflow: hidden;
+  }
+  .twitterIcon {
+    top: 10.56rem;
+  }
+  .tikTokIcon,
+  .twitterIcon,
+  .xmlid801Icon {
+    position: absolute;
+    overflow: hidden;
+  }
+  .tikTokIcon {
+    top: 18.5rem;
+    left: 0.62rem;
+    width: 1.86rem;
+    height: 1.69rem;
+  }
+  .xmlid801Icon {
+    height: 7.25%;
+    width: 13.89%;
+    top: 67.73%;
+    right: 82.78%;
+    bottom: 25.02%;
+    left: 3.33%;
+    /* max-width: 100%; */
+    max-height: 100%;
+  }
+  .followUsParent {
+    position: absolute;
+    top: 4.56rem;
+    left: 85.81rem;
+    width: 12.38rem;
+    height: 21.5rem;
+  }
+  .footr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 122.25rem;
+    height: 31.94rem;
+  }
+  .footer {
+    position: relative;
+    width: 100%;
+    height: 30.94rem;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.75rem;
+    color: #fff;
+    font-family: 'Montserrat';
+  }
+  .myfooter {
+    width: 100%;
+    height: 30.94rem;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.75rem;
+    color: #fff;
+    background-image: url('../../assets/images/group-9243.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat';
+  }
+  .myfooter div {
+    width: 25%;
+    height: 30.94rem;
+    /* background-color: red; */
+  }
