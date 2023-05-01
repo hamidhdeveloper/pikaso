@@ -1,11 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import styles from "./ChooseImageSize.module.css";
 import icon1 from "../../../../assets/images/image-2@2x.png";
 import icon2 from "../../../../assets/images/image-3@2x.png";
 import { Container, Row, Col } from "react-bootstrap";
 
 const ChooseImageSize = () => {
-  return (
+  const [selectedImage, setSelectedImage] = useState(null);
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+    
+  };
+  return ( 
     <>
       <Container fluid>
         <Row className={styles.chooseimagesizeContainer}>
@@ -28,7 +33,7 @@ const ChooseImageSize = () => {
               2023 @ Ai. All rights reserved.
             </p>
           </Col>
-          <Col xs={12} md={8} className={styles.imagesizeRightCol}>
+          <Col xs={12} md={8} className={`${styles.imagesizeRightCol}`}>
             <div className={styles.imagesizeRightbox}>
               <input type="text" placeholder="Give us a design!" />
               <div
@@ -36,11 +41,11 @@ const ChooseImageSize = () => {
               >{`Choose image size `}</div>
               <Row>
                 <Col xs={6} className={styles.image2Icon2Col}>
-                  <img className={styles.image1IconImg} alt="" src={icon1} />
+                  <img  alt="" src={icon1} className={`${styles.image1IconImg} ${selectedImage === icon1 && styles.selected}`} onClick={() => handleImageClick(icon1)} />
                   <p className={styles.size1}>2*1</p>
                 </Col>
                 <Col xs={6} className={styles.image2Icon2Col}>
-                  <img className={styles.image2IconImg} alt="" src={icon2} />
+                  <img alt="" src={icon2} className={`${styles.image2IconImg} ${selectedImage === icon2 && styles.selected}`} onClick={() => handleImageClick(icon2)} />
                   <p className={styles.size2}> 1*1</p>
                 </Col>
                 <button className={styles.startNowbtn}>{`Generate `}</button>

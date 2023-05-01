@@ -30,4 +30,7 @@
   .navbar-toggler:focus {
     box-shadow: none;
   }
+  .a:hover{
+    color: #eecea5 !important;
+  }
   

@@ -37,7 +37,8 @@
 }
 .k {
   color: #eccb9c;
-}
+} 
+
 .artwork,
 .mAKContainer {
   position: absolute;
@@ -119,6 +120,9 @@
     text-decoration: none;
     text-align: center;
     padding: 0.4rem 0rem;
+}
+.startNowbtn:hover{
+  color: #eecea5;
 }
 /* responsive  */
 @media screen and (max-width: 1600px) {
