@@ -30,9 +30,6 @@ const ChooseImageSize = () => {
             <p className={styles.bringSomethingIntoText}>
               bring (something) into existence.
             </p>
-            <br /> <br />
-            <br />
-            <br />
             <p className={styles.aiAllRightstext}>
               2023 @ Ai. All rights reserved.
             </p>
@@ -44,7 +41,7 @@ const ChooseImageSize = () => {
                 className={styles.choseImageSizeText}
               >{`Choose image size `}</div>
               <Row>
-                <Col xs={4} className={styles.image2Icon2Col} style={{alignItems:'flex-end'}}>
+                <Col xs={4} className={styles.image2Icon2Col} >
                   <span className={`${styles.box1} ${selectedSize === size1 && styles.selected}`} onClick={() => handleSizeClick(size1)}></span>
                   <p className={styles.size1}>2*3</p>
                 </Col>
@@ -52,7 +49,7 @@ const ChooseImageSize = () => {
                   <span className={`${styles.box2} ${selectedSize === size2 && styles.selected}`} onClick={() => handleSizeClick(size2)}></span>
                   <p className={styles.size2}> 1*1</p>
                 </Col>
-                <Col xs={4} className={styles.image2Icon2Col} style={{alignItems:'flex-start'}}>
+                <Col xs={4} className={styles.image2Icon2Col}>
                   <span className={`${styles.box3} ${selectedSize === size3 && styles.selected}`} onClick={() => handleSizeClick(size3)}></span>
                   <p className={styles.size3}> 3*2</p>
                 </Col>

@@ -12,6 +12,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Header = () => {
   const location = useLocation();
   const startCreating = location.pathname === '/startcreating';
+  const home = location.pathname === '/';
   
   return (
     <>
@@ -19,9 +20,9 @@ const Header = () => {
         <Navbar key={expand} bg="light" expand={expand} className={`${styles.navBackground} mb-3`} style={{zIndex: '98',background: 'none'}}>
           <Container fluid>
             
-            <Navbar.Brand href="#" ><img src={logo} alt='logo' className={`${styles.logo} ${startCreating ? styles.inverted : ''}`} /></Navbar.Brand>
+            <Link to="/" ><img src={logo} alt='logo' className={`${styles.logo} ${startCreating ? styles.inverted : ''}`} /></Link>
             <Nav
-            className={`${styles.mynav} d-none d-md-block`} 
+            className={`${styles.mynav} ${startCreating ? 'd-none' : home ? 'd-none d-md-block' : 'd-md-block'}`} 
           > 
             <Link to="/" className={`${location.pathname === '/' ? 'active' : ''} ${startCreating ? styles.whiteLink : ''}`}>Home</Link>
             <Link to="about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
