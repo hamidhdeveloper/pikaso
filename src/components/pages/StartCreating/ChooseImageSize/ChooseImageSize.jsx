@@ -1,14 +1,18 @@
 import React,{useState} from "react";
 import styles from "./ChooseImageSize.module.css";
-import icon1 from "../../../../assets/images/image-2@2x.png";
-import icon2 from "../../../../assets/images/image-3@2x.png";
+// import icon1 from "../../../../assets/images/image-2@2x.png";
+// import icon2 from "../../../../assets/images/image-3@2x.png";
+// import icon3 from "../../../../assets/images/image-3@2x.png";
 import { Container, Row, Col } from "react-bootstrap";
 
 const ChooseImageSize = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
-    
+  const size1 = '2*3';
+  const size2 = '1*1';
+  const size3 = '3*2';
+  const [selectedSize, setSelectedSize] = useState(null);
+
+  const handleSizeClick = (size) => {
+    setSelectedSize(size);
   };
   return ( 
     <>
@@ -40,13 +44,17 @@ const ChooseImageSize = () => {
                 className={styles.choseImageSizeText}
               >{`Choose image size `}</div>
               <Row>
-                <Col xs={6} className={styles.image2Icon2Col}>
-                  <img  alt="" src={icon1} className={`${styles.image1IconImg} ${selectedImage === icon1 && styles.selected}`} onClick={() => handleImageClick(icon1)} />
-                  <p className={styles.size1}>2*1</p>
+                <Col xs={4} className={styles.image2Icon2Col} style={{alignItems:'flex-end'}}>
+                  <span className={`${styles.box1} ${selectedSize === size1 && styles.selected}`} onClick={() => handleSizeClick(size1)}></span>
+                  <p className={styles.size1}>2*3</p>
                 </Col>
-                <Col xs={6} className={styles.image2Icon2Col}>
-                  <img alt="" src={icon2} className={`${styles.image2IconImg} ${selectedImage === icon2 && styles.selected}`} onClick={() => handleImageClick(icon2)} />
+                <Col xs={4} className={styles.image2Icon2Col}>
+                  <span className={`${styles.box2} ${selectedSize === size2 && styles.selected}`} onClick={() => handleSizeClick(size2)}></span>
                   <p className={styles.size2}> 1*1</p>
+                </Col>
+                <Col xs={4} className={styles.image2Icon2Col} style={{alignItems:'flex-start'}}>
+                  <span className={`${styles.box3} ${selectedSize === size3 && styles.selected}`} onClick={() => handleSizeClick(size3)}></span>
+                  <p className={styles.size3}> 3*2</p>
                 </Col>
                 <button className={styles.startNowbtn}>{`Generate `}</button>
               </Row>

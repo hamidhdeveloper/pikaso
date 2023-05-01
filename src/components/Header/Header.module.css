@@ -4,6 +4,9 @@
 .inverted {
   filter: invert(1);
 }
+.whiteLink {
+  color: white;
+}
 .mynav{
     /* display: flex;
     flex-direction: row;

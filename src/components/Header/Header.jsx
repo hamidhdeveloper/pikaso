@@ -12,8 +12,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Header = () => {
   const location = useLocation();
   const startCreating = location.pathname === '/startcreating';
-  console.log('current ',location.pathname)
-  console.log('my one ',startCreating)
+  
   return (
     <>
        {[false].map((expand) => (
@@ -24,7 +23,7 @@ const Header = () => {
             <Nav
             className={`${styles.mynav} d-none d-md-block`} 
           > 
-            <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
+            <Link to="/" className={`${location.pathname === '/' ? 'active' : ''} ${startCreating ? styles.whiteLink : ''}`}>Home</Link>
             <Link to="about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
             <Link to="howitswork" className={location.pathname === '/howitswork' ? 'active' : ''}>How its work</Link>
             
