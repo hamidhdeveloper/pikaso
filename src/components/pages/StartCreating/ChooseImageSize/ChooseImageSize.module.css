@@ -7,7 +7,7 @@
     /* height: 73.19rem; */
     overflow: hidden;
     text-align: left;
-    font-size: 0.94rem;
+    font-size: 0.94rem; 
     color: #000;
     font-family: 'Poppins';
   overflow: hidden;
@@ -126,7 +126,6 @@
 .startNowbtn{
     background: black;
      color: #fff;
-     height: 2rem;
      width: 13rem;
      font-size: 1rem;
      font-weight: 100;
@@ -135,7 +134,14 @@
      border-radius: 4px;
      margin: 0 auto;
      margin-top: 1rem;
+
+    text-decoration: none;
+    text-align: center;
+    padding: 0.4rem 0rem;
  }
+ .startNowbtn:hover{
+    color: #eecea5;
+  }
  .box1{
     height: 3rem;
     width: 4rem;

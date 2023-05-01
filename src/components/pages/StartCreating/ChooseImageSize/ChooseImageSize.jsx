@@ -1,11 +1,9 @@
 import React,{useState} from "react";
 import styles from "./ChooseImageSize.module.css";
-// import icon1 from "../../../../assets/images/image-2@2x.png";
-// import icon2 from "../../../../assets/images/image-3@2x.png";
-// import icon3 from "../../../../assets/images/image-3@2x.png";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const ChooseImageSize = () => {
+const ChooseImageSize = () => { 
   const size1 = '2*3';
   const size2 = '1*1';
   const size3 = '3*2';
@@ -53,7 +51,7 @@ const ChooseImageSize = () => {
                   <span className={`${styles.box3} ${selectedSize === size3 && styles.selected}`} onClick={() => handleSizeClick(size3)}></span>
                   <p className={styles.size3}> 3*2</p>
                 </Col>
-                <button className={styles.startNowbtn}>{`Generate `}</button>
+                <Link to='/outputimages' className={styles.startNowbtn}>{`Generate `}</Link>
               </Row>
             </div>
           </Col>

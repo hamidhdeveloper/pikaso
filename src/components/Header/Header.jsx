@@ -22,7 +22,7 @@ const Header = () => {
             
             <Link to="/" ><img src={logo} alt='logo' className={`${styles.logo} ${startCreating ? styles.inverted : ''}`} /></Link>
             <Nav
-            className={`${styles.mynav} ${startCreating ? 'd-none' : home ? 'd-none d-md-block' : 'd-md-block'}`} 
+            className={`${styles.mynav} ${home ? 'd-none d-md-block' : 'd-none'}`} 
           > 
             <Link to="/" className={`${location.pathname === '/' ? 'active' : ''} ${startCreating ? styles.whiteLink : ''}`}>Home</Link>
             <Link to="about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
