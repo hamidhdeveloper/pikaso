@@ -4,7 +4,7 @@
 }
 .loginContainerLeft{
    
-   display: flex;
+   display: flex; 
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -88,7 +88,38 @@
 .signupbtn:hover{
     color:#DFA968;
 }
+.digitText{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
 
+/* code verifcation */
 
-
+.verificationCodeInput {
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+    gap: 1rem;
+  }
+  
+  .verificationCodeInput input {
+    width: 3rem;
+    height: 3rem;
+    font-weight: 500;
+    font-size: 2.8rem;
+    text-align: center;
+    border-radius: 0.4rem;
+    border: none;
+    background: #F9F9F9;
+    outline: none;
+    margin-right: 5px;
+    padding: 2rem 0rem;
+  }
+  .verificationCodeInput input:focus{
+    outline: none;
+  }
+  
+  .verificationCodeInput .form-control:last-child {
+    margin-right: 0;
+  }
   

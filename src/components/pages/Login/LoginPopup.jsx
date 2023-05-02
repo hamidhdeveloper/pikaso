@@ -35,10 +35,10 @@ const LoginPopup = () => {
                  <span className={styles.forgotThePasswordText}><Link>Forgot the password ?</Link></span>
               </p>
               <p>
-               <Link className={styles.loginbtn}>Login</Link>
+               <Link to='/login' className={styles.loginbtn} onClick={() => setShowModal(false)}>Login</Link>
               </p>
               <p style={{marginBottom: '3rem', marginTop: '2rem'}}>
-               <Link className={styles.signupbtn}>Sign Up</Link>
+               <Link to='/signup' className={styles.signupbtn} onClick={() => setShowModal(false)}>Sign Up</Link>
               </p>
                
     
