@@ -13,6 +13,7 @@
   font-family: 'Poppins';
 overflow: hidden;
 position: relative;
+/* margin-top: -7rem; */
 }
 
 .startText{
@@ -45,13 +46,13 @@ bottom: 0;
   justify-content: center;
   align-items: center;
   /* background-color: #F1F0EE; */
-  background-image: url('../../../../assets/images/startcreating-bg.png');
+  background-image: url('../../../../assets/images/create-shawdownew.png');
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: left bottom;
   object-fit: cover;
   background-size: cover;
   padding-top: 3rem;
-  padding-bottom: 8rem;
+  padding-bottom: 5rem;
   flex-direction: column;
 }
 
@@ -85,7 +86,7 @@ bottom: 0;
   align-items: center;
 }
 .selectYourFavouriteText span{
-  padding: 0rem 7rem;
+  padding: 0rem 1rem;
 }
 .createNew{
  font-weight: 500;
@@ -140,11 +141,18 @@ bottom: 0;
     }
 }
 @media (max-width: 1001px) {
+
   .selectYourFavouriteText span{
     padding: 0 4rem;
   }
   .reload{
     padding: 0.6rem 0.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  /* CSS styles to apply when screen size is greater than 1024px */
+  html{
+    font-size: 80%;
   }
 }
 

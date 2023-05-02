@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 const StartCreatingHero = () => {
   return (
     <>
-      <Container fluid>
+      <Container fluid> 
         <Row className={styles.startCreatingContainer}>
           <Col className="col-xs-12">
             <b className={styles.startCreatingText}>{`Start Creating `}</b>

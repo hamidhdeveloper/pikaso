@@ -29,7 +29,7 @@
   }
 
   /* responsive */
-  @media (max-width: 315px) {
+  @media (max-width: 395px) {
     html {
       font-size: 40%;
     }
@@ -37,6 +37,12 @@
     .startCreatingText {
       text-align: center;
       line-height: 6rem;
+      font-size: 4.56rem;
     }
 
+  }
+  @media (max-width: 395px) {
+    html {
+      font-size: 20%;
+    }
   }

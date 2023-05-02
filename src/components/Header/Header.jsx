@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,11 +8,23 @@ import styles from "./Header.module.css";
 import group from '../../assets/images/group-9244.svg'
 import ellipse from '../../assets/images/ellipse-4.svg'
 import { Link, useLocation } from 'react-router-dom';
+import LoginPopup from '../pages/Login/LoginPopup';
 
 const Header = () => {
   const location = useLocation();
   const startCreating = location.pathname === '/startcreating';
   const home = location.pathname === '/';
+  // for modal
+  const [modal, setModal] = useState(false);
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if (modal) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
   
   return (
     <>
@@ -33,7 +45,7 @@ const Header = () => {
             <div className={styles.headerRight}>
               <div className={styles.cartIcons}>
               <img className={`${styles.groupChild} ${startCreating ? styles.inverted : ''}`} alt="" src={group} />
-        <img className={styles.groupItem} alt="" src={ellipse} />
+        <img className={styles.groupItem} alt="" src={ellipse} onClick={toggleModal} />
         <div className={styles.count}>1</div>
               </div>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className={`${styles.customTogglerIcon} ${startCreating ? styles.inverted : ''}`}/>
@@ -60,6 +72,9 @@ const Header = () => {
           </Container>
         </Navbar>
       ))}
+
+      {/* modal import here */}
+      <LoginPopup />
     </>
   )
 }

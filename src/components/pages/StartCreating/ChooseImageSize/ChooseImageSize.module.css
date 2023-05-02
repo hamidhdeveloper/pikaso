@@ -12,6 +12,7 @@
     font-family: 'Poppins';
   overflow: hidden;
   position: relative;
+  
 }
 
 .startText{
@@ -46,11 +47,11 @@
     /* background-color: #F1F0EE; */
     background-image: url('../../../../assets/images/startcreating-bg.png');
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: left bottom;
     object-fit: cover;
     background-size: cover;
     padding-top: 3rem;
-    padding-bottom: 8rem;
+    padding-bottom: 5rem;
 }
 
 .imagesizeRightbox{
@@ -204,7 +205,10 @@
   }
   @media (max-width:  396px) {
     .imagesizeRightbox input{
-        padding: 0.5rem 5.5rem 0.5rem 2rem;
+        padding: 0.5rem 2rem 0.5rem 2rem;
+    }
+    .imagesizeRightbox{
+      width: 80%;
     }
   }
  
