@@ -2,8 +2,8 @@ import React from 'react'
 import HeroSection from './heroSection/HeroSection'
 import CreateYourOwn from './createOwn/CreateYourOwn'
 import EnhanceArtwork from './enhanceArtwork/EnhanceArtwork'
-import ImageCreated from './imageCreated/ImageCreated'
-import ImagesEnhance from './imagesEnhance/ImagesEnhance'
+// import ImageCreated from './imageCreated/ImageCreated'
+// import ImagesEnhance from './imagesEnhance/ImagesEnhance'
 
 const Home = () => {
   return (
@@ -11,8 +11,8 @@ const Home = () => {
     <HeroSection />
     <CreateYourOwn />
     <EnhanceArtwork />
-    <ImageCreated />
-    <ImagesEnhance />
+    {/* <ImageCreated /> */}
+    {/* <ImagesEnhance /> */}
     </>
   )
 }

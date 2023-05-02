@@ -1,19 +1,15 @@
-import React, { useState } from "react";
-import styles from "./LoginPopup.module.css";
-import { Row, Col, Modal } from "react-bootstrap";
+import React from "react";
+import styles from "./Login.module.css";
+import { Row, Col } from "react-bootstrap";
 import logo from '../../../assets/images/logo.png'
 import { Link } from "react-router-dom";
-const LoginPopup = () => {
-  const [showModal, setShowModal] = useState(true);
 
+const Login = () => {
   return (
     <>
-      <Modal show={showModal} onHide={() => setShowModal(false)} >
-        <Modal.Body className={styles.modalBody}>
-        <Row className={styles.loginContainer}>
+      <Row className={styles.loginContainer}>
             <Col xs={12} md={12} className={styles.closebtn}>
-            {/* <button type="button" class="btn-close" aria-label="Close" onClick={() => setShowModal(false)}></button> */}
-            </Col>
+            </Col> 
         </Row>
         
           <Row className={styles.loginContainer}>
@@ -38,7 +34,7 @@ const LoginPopup = () => {
                <Link className={styles.loginbtn}>Login</Link>
               </p>
               <p style={{marginBottom: '3rem', marginTop: '2rem'}}>
-               <Link className={styles.signupbtn}>Sign Up</Link>
+               <Link to='/signup' className={styles.signupbtn}>Sign Up</Link>
               </p>
                
     
@@ -48,10 +44,8 @@ const LoginPopup = () => {
               
             </Col>
           </Row>
-        </Modal.Body>
-      </Modal>
     </>
-  );
-};
+  )
+}
 
-export default LoginPopup;
+export default Login

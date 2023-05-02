@@ -43,7 +43,10 @@ const Header = () => {
             
           </Nav>
             <div className={styles.headerRight}>
+            <Link to='/login' className={styles.loginbtn}>Login</Link>
+            <Link to='/signup' className={styles.signupbtn}>SignUp</Link>
               <div className={styles.cartIcons}>
+              
               <img className={`${styles.groupChild} ${startCreating ? styles.inverted : ''}`} alt="" src={group} />
         <img className={styles.groupItem} alt="" src={ellipse} onClick={toggleModal} />
         <div className={styles.count}>1</div>

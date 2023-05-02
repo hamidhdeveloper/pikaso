@@ -1,20 +1,27 @@
-import React, { useState } from "react";
-import styles from "./LoginPopup.module.css";
-import { Row, Col, Modal } from "react-bootstrap";
-import logo from '../../../assets/images/logo.png'
+import React,{useState} from 'react'
+import styles from "./SignUp.module.css";
+import { Row, Col } from "react-bootstrap";
+import logo from '../../../../assets/images/logo.png'
 import { Link } from "react-router-dom";
-const LoginPopup = () => {
-  const [showModal, setShowModal] = useState(true);
+import VerifyForm from './VerifyForm';
 
+
+
+const SignUp = () => {
+  const [showVerifyForm, setShowVerifyForm] = useState(false);
+
+  const handleSignUpClick = () => {
+    setShowVerifyForm(true);
+  };
   return (
     <>
-      <Modal show={showModal} onHide={() => setShowModal(false)} >
-        <Modal.Body className={styles.modalBody}>
-        <Row className={styles.loginContainer}>
+    
+    {!showVerifyForm && (
+      <>
+       <Row className={styles.loginContainer}>
             <Col xs={12} md={12} className={styles.closebtn}>
-            {/* <button type="button" class="btn-close" aria-label="Close" onClick={() => setShowModal(false)}></button> */}
-            </Col>
-        </Row>
+            </Col> 
+        </Row> 
         
           <Row className={styles.loginContainer}>
             <Col xs={12} md={6} className={styles.loginContainerLeft}>
@@ -31,14 +38,12 @@ const LoginPopup = () => {
               <p>
                 <input type="password" placeholder="Password" className={styles.username}/>
               </p>
-              <p className={styles.forgotcol}>
-                 <span className={styles.forgotThePasswordText}><Link>Forgot the password ?</Link></span>
-              </p>
               <p>
-               <Link className={styles.loginbtn}>Login</Link>
+                <input type="password" placeholder="Password" className={styles.username}/>
               </p>
+              
               <p style={{marginBottom: '3rem', marginTop: '2rem'}}>
-               <Link className={styles.signupbtn}>Sign Up</Link>
+               <Link className={styles.loginbtn} onClick={handleSignUpClick}>Sign Up</Link>
               </p>
                
     
@@ -48,10 +53,11 @@ const LoginPopup = () => {
               
             </Col>
           </Row>
-        </Modal.Body>
-      </Modal>
+      </>
+    )}
+          {showVerifyForm && <VerifyForm />}
     </>
-  );
-};
+  )
+}
 
-export default LoginPopup;
+export default SignUp

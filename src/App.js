@@ -6,6 +6,8 @@ import Home from './components/pages/Home/Home';
 import StartCreating from './components/pages/StartCreating/StartCreating';
 import OutputImages from './components/pages/StartCreating/OutputImages/OutputImages';
 import Header from './components/Header/Header';
+import Login from './components/pages/Login/Login';
+import SignUp from './components/pages/Login/SignUp/SignUp';
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
         </Route> */}
         <Route path="startcreating" element={ <StartCreating/> } />
         <Route path="outputimages" element={ <OutputImages /> } />
-        {/* <Route path="login" element={ <Login /> } /> */}
+        <Route path="login" element={ <Login /> } />
+        <Route path="signup" element={ <SignUp /> } />
+        
        
     </Routes>    
     </div>

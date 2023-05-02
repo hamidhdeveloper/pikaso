@@ -1,13 +1,5 @@
-.modalBody{
-    padding: 0;
-    
-}
-.closebtn{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.loginContainer{
+
+.loginContainer{ 
 
 }
 .loginContainerLeft{
@@ -29,9 +21,9 @@
     font-weight: 500;
 }
 .spanText{
-    font-size: 2.13rem;
+    font-size: 1.8rem;
     color: #000;
-    font-weight: bold;
+    font-weight: 500;
 }
 .username{
     font-size: 0.94rem;
@@ -51,7 +43,7 @@
     justify-content: center;
     align-items: center;
     /* background-color: #F1F0EE; */
-    background-image: url('../../../assets/images/login.png');
+    background-image: url('../../../../assets/images/login.png');
     background-repeat: no-repeat;
     background-position: left bottom;
     object-fit: cover;
@@ -69,7 +61,7 @@
 }
 .forgotcol{
     align-self: flex-end;
-    padding: 0rem 6rem;
+    padding: 0rem 16.5rem;
     margin-top: -1rem;
 }
 .loginbtn{

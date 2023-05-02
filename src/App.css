@@ -33,4 +33,14 @@
   .a:hover{
     color: #eecea5 !important;
   }
+  .modal-dialog {
+    max-width: 65%;
+    margin-top: 6rem;
+    padding: 0;
+  }
+  .modal-content{
+    overflow: hidden;
+    border: none;
+    border-radius: 0;
+  }
   
