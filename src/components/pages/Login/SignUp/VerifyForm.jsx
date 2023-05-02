@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef ,useEffect} from "react";
 import styles from "./VerifyForm.module.css";
 import { Row, Col } from "react-bootstrap";
 import logo from "../../../../assets/images/logo.png";
@@ -6,16 +6,30 @@ import { Link } from "react-router-dom";
 
 import { InputGroup, FormControl } from "react-bootstrap";
 
+
+
 const VerifyForm = () => {
   const [showVerifyCode, setShowVerifyCode] = useState(false);
+  const [codeComplete, setCodeComplete] = useState(false);
+  const [code, setCode] = useState("");
+
+  useEffect(() => {
+    if (code.length === 4) {
+      setCodeComplete(true);
+    } else {
+      setCodeComplete(false);
+    }
+  }, [code]);
+
 
   const handleVerifyClick = () => {
     setShowVerifyCode(true);
   };
 
   // for code verification
-  const [code, setCode] = useState("");
+  
   const inputs = useRef([]);
+ 
 
   const handleInputChange = (e, index) => {
     const value = e.target.value;
@@ -27,12 +41,14 @@ const VerifyForm = () => {
     if (value && inputs.current[index + 1]) {
       inputs.current[index + 1].focus();
     }
+    
   };
 
   const handleKeyDown = (e, index) => {
     if (e.key === "Backspace" && !code[index] && inputs.current[index - 1]) {
       inputs.current[index - 1].focus();
     }
+    
   };
 
   // code verification ends
@@ -90,6 +106,9 @@ const VerifyForm = () => {
               <p style={{marginTop: '-1.5rem'}}>
                 <span className={styles.digitText}>we send to test@gmail.com</span>
               </p>
+              <p style={{marginTop: '-1.5rem'}}>
+                <span className={styles.digitText}>Resend OTP</span>
+              </p>
               {/* <p>
                 <input type="text" placeholder="Code" className={styles.username}/>
               </p> */}
@@ -110,7 +129,12 @@ const VerifyForm = () => {
               {/* code verifcation ends here */}
 
               <p style={{ marginBottom: "7rem", marginTop: "2rem" }}>
-                <Link className={styles.loginbtn}>Verify</Link>
+                
+                {codeComplete ? (
+        <Link className={styles.loginbtn} to='/login' >Verify</Link>
+      ) : (
+        <Link className={styles.loginbtn} style={{opacity:'.5'}}>Verify</Link>
+      )}
               </p>
             </Col>
             <Col xs={12} md={6} className={styles.loginContainerRight}></Col>
