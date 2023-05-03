@@ -16,6 +16,9 @@ const OutputImages = () => {
   const handleImageClick = (image) => {
     setSelectedImage(image);
   };
+  const handleClearImage = () => {
+    setSelectedImage(null);
+  };
   return (
     <>
     {!selectedImage ? (
@@ -77,7 +80,7 @@ const OutputImages = () => {
       </>
     ) : (
       <>
-      {selectedImage && <ImageCanvas image={selectedImage} />}
+      {selectedImage && <ImageCanvas selectedImage={selectedImage} onClearImage={handleClearImage} />}
       </>
     )}
       
