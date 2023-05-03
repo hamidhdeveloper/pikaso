@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import styles from "./ImageCanvas.module.css";
-import { Row, Col,Form } from "react-bootstrap";
+import { Row, Col} from "react-bootstrap";
 import backicon from "../../../../assets/images/back-icon.svg";
 import frame from "../../../../assets/images/imageCanvasbg.png";
 import { AiOutlinePlus,AiOutlineMinus } from 'react-icons/ai';
