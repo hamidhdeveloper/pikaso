@@ -9,7 +9,6 @@ import { InputGroup, FormControl } from "react-bootstrap";
 
 
 const VerifyForm = () => {
-  const [showVerifyCode, setShowVerifyCode] = useState(false);
   const [codeComplete, setCodeComplete] = useState(false);
   const [code, setCode] = useState("");
 
@@ -22,9 +21,6 @@ const VerifyForm = () => {
   }, [code]);
 
 
-  const handleVerifyClick = () => {
-    setShowVerifyCode(true);
-  };
 
   // for code verification
   
@@ -54,41 +50,8 @@ const VerifyForm = () => {
   // code verification ends
   return (
     <>
-      {!showVerifyCode ? (
-        <>
-          <Row className={styles.loginContainer}>
-            <Col xs={12} md={12} className={styles.closebtn}></Col>
-          </Row>
-
-          <Row className={styles.loginContainer}>
-            <Col xs={12} md={6} className={styles.loginContainerLeft}>
-              <img src={logo} alt="" style={{ marginTop: "7rem" }} />
-              <p>
-                <span className={styles.welcomeToText}>
-                  <span className={styles.spanText}>Verify your email </span>
-                </span>
-              </p>
-
-              <p>
-                <input
-                  type="email"
-                  placeholder="Email or username"
-                  className={styles.username}
-                />
-              </p>
-
-              <p style={{ marginBottom: "7rem", marginTop: "2rem" }}>
-                <Link className={styles.loginbtn} onClick={handleVerifyClick}>
-                  Verify
-                </Link>
-              </p>
-            </Col>
-            <Col xs={12} md={6} className={styles.loginContainerRight}></Col>
-          </Row>
-        </>
-      ) : (
-        <>
-          <Row className={styles.loginContainer}>
+      
+        <Row className={styles.loginContainer}>
             <Col xs={12} md={12} className={styles.closebtn}></Col>
           </Row>
 
@@ -107,7 +70,7 @@ const VerifyForm = () => {
                 <span className={styles.digitText}>we send to test@gmail.com</span>
               </p>
               <p style={{marginTop: '-1.5rem'}}>
-                <span className={styles.digitText}>Resend OTP</span>
+                <span className={styles.digitTextLink}>Resend OTP</span>
               </p>
               {/* <p>
                 <input type="text" placeholder="Code" className={styles.username}/>
@@ -139,8 +102,8 @@ const VerifyForm = () => {
             </Col>
             <Col xs={12} md={6} className={styles.loginContainerRight}></Col>
           </Row>
-        </>
-      )}
+      
+      
     </>
   );
 };

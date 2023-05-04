@@ -13,12 +13,15 @@ const LoginPopup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    let formIsValid = true;
     
       // validate email
       if (!email) {
         setEmailError('Email is required');
+        formIsValid = false;
       } else if (!/\S+@\S+\.\S+/.test(email)) {
         setEmailError('Email is invalid');
+        formIsValid = false;
       } else {
         setEmailError('');
       }
@@ -26,15 +29,17 @@ const LoginPopup = () => {
       // validate password
       if (!password) {
         setPasswordError('Password is required');
+        formIsValid = false;
       } else if (password.length < 6) {
         setPasswordError('At least 6 characters long');
+        formIsValid = false;
       } else {
         setPasswordError('');
       }
-  
+     
       // submit the form if there are no errors
-      if (!emailError && !passwordError) {
-        console.log('Login successful!');
+      if (formIsValid) {
+        // console.log('Login successful!');
         // call your API or redirect to another page
       }
 
