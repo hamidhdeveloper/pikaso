@@ -58,20 +58,22 @@ const VerifyForm = () => {
           <Row className={styles.loginContainer}>
             <Col xs={12} md={6} className={styles.loginContainerLeft}>
               <img src={logo} alt="" style={{ marginTop: "7rem" }} />
-              <p>
+              <form className={styles.myform}>
+              <div>
                 <span className={styles.welcomeToText}>
                   <span className={styles.spanText}>Verify your email </span>
                 </span>
-              </p>
-              <p>
+              </div>
+
+              <div>
                 <span className={styles.digitText}>Enter the 4-digit verification code</span>
-              </p>
-              <p style={{marginTop: '-1.5rem'}}>
+              </div>
+              <div style={{marginTop: '-1.5rem'}}>
                 <span className={styles.digitText}>we send to test@gmail.com</span>
-              </p>
-              <p style={{marginTop: '-1.5rem'}}>
+              </div>
+              <div style={{marginTop: '-1.5rem'}}>
                 <span className={styles.digitTextLink}>Resend OTP</span>
-              </p>
+              </div>
               {/* <p>
                 <input type="text" placeholder="Code" className={styles.username}/>
               </p> */}
@@ -91,14 +93,15 @@ const VerifyForm = () => {
               </InputGroup>
               {/* code verifcation ends here */}
 
-              <p style={{ marginBottom: "7rem", marginTop: "2rem" }}>
+              <div style={{ marginBottom: "7rem", marginTop: "2rem" }}>
                 
                 {codeComplete ? (
         <Link className={styles.loginbtn} to='/login' >Verify</Link>
       ) : (
         <Link className={styles.loginbtn} style={{opacity:'.5'}}>Verify</Link>
       )}
-              </p>
+              </div>
+              </form>
             </Col>
             <Col xs={12} md={6} className={styles.loginContainerRight}></Col>
           </Row>

@@ -128,4 +128,10 @@
   .verificationCodeInput .form-control:last-child {
     margin-right: 0;
   }
+  .myform{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
   
