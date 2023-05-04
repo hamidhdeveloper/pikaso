@@ -26,26 +26,26 @@ const SignUp = () => {
           <Row className={styles.loginContainer}>
             <Col xs={12} md={6} className={styles.loginContainerLeft}>
               <img src={logo} alt="" />
-              <p>
+              <div style={{marginBottom: '1rem'}}>
               <span className={styles.welcomeToText}>
                   <span>Welcome to </span>
                   <span className={styles.spanText}>Picasso Ai</span>
                 </span>
-              </p>
-              <form>
-              <p>
+              </div>
+              <form className={styles.myform}>
+              <div>
                 <input type="text" placeholder="Email" className={styles.username}/>
-              </p>
-              <p>
+              </div>
+              <div>
                 <input type="password" placeholder="Password" className={styles.username}/>
-              </p>
-              <p>
+              </div>
+              <div>
                 <input type="password" placeholder="Confirm Password" className={styles.username}/>
-              </p>
+              </div>
               
-              <p style={{marginBottom: '3rem', marginTop: '2rem'}}>
+              <div style={{marginBottom: '3rem', marginTop: '2rem'}}>
                <Link className={styles.loginbtn} onClick={handleSignUpClick}>Sign Up</Link>
-              </p>
+              </div>
                
               </form>
 

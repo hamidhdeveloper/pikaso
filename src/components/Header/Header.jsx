@@ -64,7 +64,7 @@ const Header = () => {
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"  show={show} onHide={handleClose}  
             >
-              <Offcanvas.Header style={{alignItems:'baseline'}} >
+              <Offcanvas.Header style={{alignItems:'baseline',padding: '1rem 2.5rem'}} >
         
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className={styles.menuTitle}>
                   Menu

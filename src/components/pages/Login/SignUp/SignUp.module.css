@@ -3,7 +3,7 @@
 
 }
 .loginContainerLeft{
-   
+   height: 90vh;
    display: flex;
     justify-content: center;
     align-items: center;
@@ -87,6 +87,11 @@
 }
 .signupbtn:hover{
     color:#DFA968;
+}
+.myform{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
 }
 
 
