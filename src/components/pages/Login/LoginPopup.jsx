@@ -4,7 +4,7 @@ import { Row, Col, Modal } from "react-bootstrap";
 import logo from '../../../assets/images/logo.png'
 import { Link } from "react-router-dom";
 const LoginPopup = () => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   // for login validation
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
