@@ -68,9 +68,9 @@
     font-size: 0.63rem;
 }
 .forgotcol{
-    align-self: flex-end;
-    padding: 0rem 16.5rem;
-    margin-top: -1rem;
+    width: 22.2rem;
+    display: flex;
+    justify-content: flex-end;
 }
 .loginbtn{
     font-weight: bold;

@@ -34,7 +34,7 @@
     color: #eecea5 !important;
   }
   .modal-dialog {
-    max-width: 65%;
+    max-width: 73rem;
     margin-top: 6rem;
     padding: 0;
   }
@@ -43,4 +43,23 @@
     border: none;
     border-radius: 0;
   }
+  /* popup responsive */
+  
+  @media (max-width: 767px) {
+     .modal-dialog{
+      max-width: 35rem;
+     }
+  }
+  @media (max-width: 349px) {
+    .modal-dialog{
+      max-width: 28rem;
+     }
+  }
+@media (max-width: 575px) {
+  .modal-dialog{
+    margin-top: 17rem;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  }
+}
   

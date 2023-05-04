@@ -46,7 +46,7 @@
     outline:1px solid #393939;
 
 }
-.loginContainerRight{
+.loginContainerRight{ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,9 +68,9 @@
     font-size: 0.63rem;
 }
 .forgotcol{
-    align-self: flex-end;
-    padding: 0rem 6rem;
-    margin-top: -1rem;
+    width: 22.2rem;
+    display: flex;
+    justify-content: flex-end;
 }
 .loginbtn{
     font-weight: bold;
@@ -80,6 +80,7 @@
     background: #000;
     border-radius: 0.4rem;
     padding: 1rem 10rem;
+    border: none;
 }
 .loginbtn:hover{
     color:#DFA968;
@@ -96,6 +97,41 @@
 .signupbtn:hover{
     color:#DFA968;
 }
+
+/* responsive */
+@media (max-width: 767px) {
+    .signupbtnContainer{
+        margin-top: 1rem !important;
+       }
+ }
+@media (max-width: 349px) {
+   .welcomeToText{
+    font-size: 1.3rem;
+   }
+   .spanText{
+    font-size: 1.5rem;
+   }
+   .username{
+    padding: 1rem 10rem 1rem 1rem;
+   }
+   .loginbtn{
+    padding: 1rem 9rem;
+   }
+   .signupbtn{
+    padding: 1rem 8.4rem;
+   }
+   .signupbtnContainer{
+    margin-top: 0rem !important;
+   }
+   .loginContainerLeft img{
+    margin: 2rem 0rem;
+   }
+   .forgotcol{
+    width: 20rem;
+   }
+
+}
+
 
 
 
