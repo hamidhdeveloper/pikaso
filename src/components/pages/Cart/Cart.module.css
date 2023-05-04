@@ -1,0 +1,117 @@
+.cartContainer{
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.56rem;
+    color: #000;
+    height: 55rem;
+    /* background-color: aqua; */
+    background-image: url('../../../assets/images/cartbackground.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    object-fit: cover;
+    background-size: contain;
+    
+}
+.cartCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartBody{
+    /* height: 50rem; */
+    width: 68%;
+    display: flex;
+    /* border: 1px solid red; */
+    align-items: flex-start;
+}
+.left{
+
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+}
+.remove{
+    color: white;
+    text-decoration: none;
+}
+.remove:hover{
+    color:#eecea5;
+}
+.title{
+    font-size: 3.13rem;
+    font-weight: bold;
+}
+.itemBox{
+    width: 79rem;
+    height: 10rem;
+    box-shadow: 0px 0px 6px #80808026;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.itemBoxLeft{
+    margin-left: -4rem;
+}
+.itemBoxLeftImg{
+    
+    height: 7rem;
+    width: 5rem;
+    object-fit: cover;
+}
+.itemTitle{
+    font-size: 1.8rem;
+}
+.itemTitle2{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.itemTitle3{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.itemBoxCenter{
+    margin-left: -11rem;
+}
+.itemBoxRight{
+    
+}
+.quantityInput{
+    background: no-repeat;
+    border: none;
+    margin: 0 auto;
+    padding-left: 3rem;
+}
+.total{
+    align-self: flex-end;
+    margin-top: 7rem;
+}
+.totolText{
+    color: #707070;
+    font-weight: 300;
+}
+.aed7290{
+    font-size: 3.13rem;
+    color: #707070;
+}
+.spanPrice{
+    color: #000;
+}
+.proceedAlign{
+    align-self: flex-end;
+}
+.checkoutbtn{
+    font-weight: 500;
+    font-size: 1.44rem;
+    font-size: 1.44rem;
+    padding: 0.63rem 3rem;
+    background-color: #242424;
+    color: #fff;
+    text-decoration: none;
+   }
+   .checkoutbtn:hover{
+    color: #eccb9c;
+   }

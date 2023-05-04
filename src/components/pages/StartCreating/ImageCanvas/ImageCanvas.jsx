@@ -99,7 +99,7 @@ const ImageCanvas = ({ selectedImage, onClearImage }) => {
       </b>
             </div>
             <div>
-              <Link className={styles.checkoutbtn}>Checkout <BsArrowRight /></Link>
+              <Link to='/cart' className={styles.checkoutbtn}>Checkout <BsArrowRight /></Link>
             </div>
             <div style={{marginTop: '2rem'}}>
               <Link to='/startcreating' className={styles.creatnewbtn}>Create New </Link>

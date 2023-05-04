@@ -9,6 +9,9 @@ import group from '../../assets/images/group-9244.svg'
 import ellipse from '../../assets/images/ellipse-4.svg'
 import { Link, useLocation } from 'react-router-dom';
 import LoginPopup from '../pages/Login/LoginPopup';
+import {GrDocumentTime} from 'react-icons/gr'
+import {BsArrowRightCircleFill} from 'react-icons/bs'
+import {AiOutlineProfile,AiOutlineShoppingCart,AiFillCloseCircle} from 'react-icons/ai'
 
 const Header = () => {
   const location = useLocation();
@@ -25,6 +28,10 @@ const Header = () => {
   } else {
     document.body.classList.remove("active-modal");
   }
+  // for canvas off click on menu 
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   
   return (
     <>
@@ -51,22 +58,27 @@ const Header = () => {
         <img className={styles.groupItem} alt="" src={ellipse} onClick={toggleModal} />
         <div className={styles.count}>1</div>
               </div>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className={`${styles.customTogglerIcon} ${startCreating ? styles.inverted : ''}`}/>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className={`${styles.customTogglerIcon} ${startCreating ? styles.inverted : ''}`} onClick={handleShow} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement="end"
+              placement="end"  show={show} onHide={handleClose}  
             >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+              <Offcanvas.Header style={{alignItems:'baseline'}} >
+        
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className={styles.menuTitle}>
                   Menu
+                  
                 </Offcanvas.Title>
+                <span onClick={handleClose}><AiFillCloseCircle style={{cursor:'pointer'}} size={25}/></span>
               </Offcanvas.Header>
+              
               <Offcanvas.Body>
-                <ul>
-                  <li><a href='#action1'>History</a></li>
-                  <li><a href='#action1'>Payment method</a></li>
-                  <li><a href='#action1'>Cart</a></li>
+                <hr style={{width: '19rem',margin: '0 auto'}}/>
+                <ul className={styles.sideMenu}>
+                  <li><a href='#action1'><GrDocumentTime />History <BsArrowRightCircleFill style={{ marginLeft: 'auto'}}/></a></li>
+                  <li><a href='#action1'><AiOutlineProfile />Profile <BsArrowRightCircleFill style={{ marginLeft: 'auto'}}/></a></li>
+                  <li><Link to='/cart' onClick={handleClose}><AiOutlineShoppingCart />Cart <BsArrowRightCircleFill style={{ marginLeft: 'auto'}}/></Link></li>
                 </ul>
                 
               </Offcanvas.Body>

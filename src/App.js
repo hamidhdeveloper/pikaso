@@ -8,6 +8,7 @@ import OutputImages from './components/pages/StartCreating/OutputImages/OutputIm
 import Header from './components/Header/Header';
 import Login from './components/pages/Login/Login';
 import SignUp from './components/pages/Login/SignUp/SignUp';
+import Cart from './components/pages/Cart/Cart';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="outputimages" element={ <OutputImages /> } />
         <Route path="login" element={ <Login /> } />
         <Route path="signup" element={ <SignUp /> } />
+        <Route path="cart" element={ <Cart /> } />
         
        
     </Routes>    
