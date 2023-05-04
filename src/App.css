@@ -52,12 +52,13 @@
   }
   @media (max-width: 349px) {
     .modal-dialog{
-      max-width: 28rem;
+      max-width: 23rem;
      }
   }
 @media (max-width: 575px) {
   .modal-dialog{
-    margin-top: 17rem;
+    width: 25rem;
+    margin-top: 11rem;
   margin-right: auto !important;
   margin-left: auto !important;
   }

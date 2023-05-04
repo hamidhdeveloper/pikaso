@@ -79,7 +79,7 @@
     text-decoration: none;
     background: #000;
     border-radius: 0.4rem;
-    padding: 1rem 10rem;
+    padding: 1rem 10.1rem;
     border: none;
 }
 .loginbtn:hover{
@@ -92,10 +92,15 @@
     font-weight: 500;
     border: 1px solid #000;
     border-radius: 0.4rem;
-    padding: 1rem 9.4rem;
+    padding: 1rem 9.5rem;
 }
 .signupbtn:hover{
     color:#DFA968;
+}
+.myform{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
 }
 
 /* responsive */

@@ -54,30 +54,30 @@ const LoginPopup = () => {
           <Row className={styles.loginContainer}>
             <Col xs={12} md={6} className={styles.loginContainerLeft}>
               <img src={logo} alt="" />
-              <p>
+              <div style={{marginBottom: '1rem'}}>
               <span className={styles.welcomeToText}>
                   <span>Welcome to </span>
                   <span className={styles.spanText}>Picasso Ai</span>
                 </span>
-              </p>
-              <form onSubmit={handleSubmit}>
-              <p style={{position:'relative'}}>
+              </div>
+              <form onSubmit={handleSubmit} className={styles.myform}>
+              <div style={{position:'relative'}}>
                 <input type="email" placeholder="Email" className={styles.username} value={email} onChange={(e) => setEmail(e.target.value)}/>
                 {emailError && <p style={{ color: 'red',fontSize: '0.8rem',textAlign: 'right',position: 'absolute',top: '1rem',right: '1rem' }}>{emailError}</p>}
-              </p>
-              <p style={{position:'relative'}}>
+              </div>
+              <div style={{position:'relative'}}>
                 <input type="password" placeholder="Password" className={styles.username} value={password} onChange={(e) => setPassword(e.target.value)}/>
                 {passwordError && <p style={{ color: 'red',fontSize: '0.8rem',textAlign: 'right',position: 'absolute',top: '1rem',right: '1rem' }}>{passwordError}</p>}
-              </p>
-              <p className={styles.forgotcol}>
-                 <span className={styles.forgotThePasswordText}><Link>Forgot the password ?</Link></span>
-              </p>
-              <p>
+              </div>
+              <div className={styles.forgotcol}>
+                 <span className={styles.forgotThePasswordText}><Link>Forgot password ?</Link></span>
+              </div>
+              <div>
                <button  type="submit" className={styles.loginbtn} >Login</button>
-              </p>
-              <p style={{marginBottom: '3rem', marginTop: '2rem'}} className={styles.signupbtnContainer}>
+              </div>
+              <div style={{marginBottom: '3rem', marginTop: '2rem'}} className={styles.signupbtnContainer}>
                <Link to='/signup' className={styles.signupbtn} onClick={() => setShowModal(false)}>Sign Up</Link>
-              </p>
+              </div>
                
               </form>
 

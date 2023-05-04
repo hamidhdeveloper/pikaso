@@ -11,7 +11,7 @@
 
 }
 .loginContainerLeft{
-   
+    height: 90vh;
    display: flex;
     justify-content: center;
     align-items: center;
@@ -72,6 +72,11 @@
     display: flex;
     justify-content: flex-end;
 }
+.myform{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
 .loginbtn{
     font-weight: bold;
     font-size: 0.94rem;
@@ -79,7 +84,8 @@
     text-decoration: none;
     background: #000;
     border-radius: 0.4rem;
-    padding: 1rem 10rem;
+    padding: 1rem 10.1rem;
+    border: none;
 }
 .loginbtn:hover{
     color:#DFA968;
@@ -91,11 +97,32 @@
     font-weight: 500;
     border: 1px solid #000;
     border-radius: 0.4rem;
-    padding: 1rem 9.4rem;
+    padding: 1rem 9.5rem;
 }
 .signupbtn:hover{
     color:#DFA968;
 }
+
+@media (max-width: 963px) {
+    html{
+        font-size: 95%;
+    }
+}
+@media (max-width: 767px) {
+    html{
+        font-size: 95%;
+    }
+    .signupbtnContainer{
+        margin-top: 1rem !important;
+       }
+ }
+ @media (max-width: 423px) {
+    html{
+        font-size: 70%;
+    }
+}
+
+ 
 
 
 
