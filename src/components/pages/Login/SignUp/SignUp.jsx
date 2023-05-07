@@ -3,11 +3,16 @@ import styles from "./SignUp.module.css";
 import { Row, Col } from "react-bootstrap";
 import logo from '../../../../assets/images/logo.png'
 import VerifyForm from './VerifyForm';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../../Loading/Loading';
  
 
 
 const SignUp = () => {
   const [showVerifyForm, setShowVerifyForm] = useState(false);
+  const [showLoading, setShowLoading] = useState(false);
 
   const handleSignUpClick = () => {
     setShowVerifyForm(true);
@@ -20,7 +25,7 @@ const [emailError, setEmailError] = useState('');
 const [passwordError, setPasswordError] = useState('');
 const [confirmPasswordError, setConfirmPasswordError] = useState('');
 
-const handleSubmit = (e) => {
+const handleSubmit = async(e) => {
   e.preventDefault();
   let formIsValid = true;
 
@@ -59,14 +64,49 @@ const handleSubmit = (e) => {
 
   // submit the form if there are no errors
   if (formIsValid) {
-    handleSignUpClick()
+    // handleSignUpClick()
     // console.log('Signup successful!');
-    // call your API or redirect to another page
+    setShowLoading(true);
+    const url = `${process.env.REACT_APP_BASE_URL}api/v1/user/register`;
+    const data = {
+      email: email,
+      password: password,
+      confirmPassword: confirmPassword
+    };
+    const headers = {
+      'Content-Type': 'application/json',
+      'ngrok-skip-browser-warning': 'true'
+    };
+  
+    try {
+      const response = await axios.post(url, data, { headers });
+      if (response.status === 200) {
+        toast.success('Verification code sent!');
+        // console.log('Registration successful');
+        setShowLoading(false)
+        handleSignUpClick()
+      }
+      // console.log(response.data);
+    } catch (error) {
+      if (error.response.status === 409) {
+        setShowLoading(false)
+        toast.error('User already exists');
+        // console.log('Registration failed: user already exists');
+      } else {
+        toast.error('Something went wrong please try again later');
+      }
+    }
   }
+     
+
+  
 };
   return (
     <>
     
+        <ToastContainer />
+        <Loading showLoading={showLoading}setShowLoading={showLoading} />
+      
     {!showVerifyForm && (
       <>
        <Row className={styles.loginContainer}>
@@ -110,7 +150,7 @@ const handleSubmit = (e) => {
           </Row>
       </>
     )}
-          {showVerifyForm && <VerifyForm />}
+          {showVerifyForm && <VerifyForm  email={email}/>}
     </>
   )
 }

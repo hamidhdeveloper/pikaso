@@ -125,34 +125,34 @@
   color: #eecea5;
 }
 /* responsive  */
-@media screen and (max-width: 1600px) {
+/* @media screen and (max-width: 1600px) {
   html{
     font-size: 90%;
   }
-}
+} */
 @media screen and (max-width: 1181px) {
-  html{
+  /* html{
     font-size: 80%;
-  }
+  } */
 }
 @media screen and (max-width: 964px) {
-  html{
+  /* html{
     font-size: 70%;
-  }
-  .herosection{
+  } */
+  /* .herosection{
     height: 85vh;
-  }
+  } */
 }
 @media screen and (max-width: 915px) {
-  html{
+  /* html{
     font-size: 60%;
-  }
-  .herosection{
+  } */
+  /* .herosection{
     height: 70vh;
-  }
-  .aiGeneratedImages {
+  } */
+  /* .aiGeneratedImages {
     display: none;
-  }
+  } */
 }
 
 /* code here */
@@ -176,6 +176,26 @@
   object-fit: cover;
   background-size: cover;
 }
+/* responsive */
+@media (max-width: 964px) {
+  /* .mAKContainer{
+
+    top: 14.03%;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .artwork{
+    top: 17rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .aiGeneratedImages{
+    font-size: 2rem;
+    line-height: 2.5rem;
+  } */
+
+}
+
 
 
 

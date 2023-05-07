@@ -1,8 +1,28 @@
-import { Link } from "react-router-dom";
+import React,{useState} from "react";
+import { Link , useNavigate } from "react-router-dom";
 import styles from "./HeroSection.module.css";
+import LoginPopup from "../../Login/LoginPopup";
 // import rectangle from '../../../../assets/images/rectangle-30705@2x.png'
 // import rectangle3 from '../../../../assets/images/rectangle-3.svg'
 const HeroSection = () => {
+  const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+
+  // const [showLoginModal, setShowLoginModal] = useState(false);
+  // check if the user login already
+  const startNow = async (e) => {
+    e.preventDefault();
+    const token = localStorage.getItem('token');
+    if (!token) {
+    // Redirect user to login page
+       setShowModal(true);
+      //  console.log('hero',showLoginModal)
+    }else{
+      navigate('/startcreating');
+      // console.log('hero',showLoginModal)
+    }
+    
+  }
   return (
     <>
     <div className={styles.herosection}> 
@@ -33,7 +53,7 @@ const HeroSection = () => {
         <p className={styles.r}>w</p>
         <p className={styles.r}>n</p>
       </div>
-      <Link to="startcreating" className={styles.startNowbtn}>start now</Link>
+      <Link to="startcreating" className={styles.startNowbtn} onClick={startNow}>start now</Link>
       {/* <div className={styles.startNowButton}>
         <img
           className={styles.startNowButtonChild}
@@ -43,6 +63,7 @@ const HeroSection = () => {
         <div className={styles.startNow}>start now</div>
       </div> */}
     </div>
+    <LoginPopup showModal={showModal} setShowModal={setShowModal} />
     </>
     
   );
