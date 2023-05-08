@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { Link , useNavigate } from "react-router-dom";
 import styles from "./HeroSection.module.css";
-import LoginPopup from "../../Login/LoginPopup";
+import LoginPopup from "../../Login/LoginPopup"; 
 // import rectangle from '../../../../assets/images/rectangle-30705@2x.png'
 // import rectangle3 from '../../../../assets/images/rectangle-3.svg'
 const HeroSection = () => {
@@ -26,6 +26,11 @@ const HeroSection = () => {
   return (
     <>
     <div className={styles.herosection}> 
+      <div className={styles.mobileView}>
+           <div className={styles.makeMobile}>Make Your Own</div>
+           <div className={styles.artMobile}>ART WORK</div>
+           <div><button className={styles.startMobile} onClick={startNow}>Start Now</button></div>
+      </div>
       <div className={styles.aiGeneratedImagesWrapper}>
         <div
           className={styles.aiGeneratedImages}

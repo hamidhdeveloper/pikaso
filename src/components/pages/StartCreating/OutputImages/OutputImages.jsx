@@ -3,7 +3,7 @@ import styles from "./OutputImages.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import image1 from "../../../../assets/images/image-13.png";
 import image2 from "../../../../assets/images/image12.png";
-import image3 from "../../../../assets/images/image-14.png";
+import image3 from "../../../../assets/images/image-14.png"; 
 import image4 from "../../../../assets/images/image-11.png";
 import reload from "../../../../assets/images/reload.svg";
 import { Link } from "react-router-dom";

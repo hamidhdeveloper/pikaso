@@ -9,36 +9,25 @@ import { CiMenuKebab } from "react-icons/ci";
 import { Overlay, Tooltip } from "react-bootstrap";
 import { BsArrowRight } from 'react-icons/bs';
 
-const Cart = () => {
+const Cart = () => { 
   // remove btn
   const [show, setShow] = useState(false);
   const target = useRef(null);
   
   // for quantity
-  const [quantity, setQuantity] = useState(1);
+  
   const [quantity2, setQuantity2] = useState(1);
 
-  const handleDecrease = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
-
-  const handleIncrease = () => {
-    if (quantity < 10) {
-      setQuantity(quantity + 1);
-    }
-  };
-
+  
   const handleDecrease2 = () => {
     if (quantity2 > 1) {
-      setQuantity2(quantity - 1);
+      setQuantity2(quantity2 - 1);
     }
   };
 
   const handleIncrease2 = () => {
     if (quantity2 < 10) {
-      setQuantity2(quantity + 1);
+      setQuantity2(quantity2 + 1);
     }
   };
   return (
@@ -56,66 +45,11 @@ const Cart = () => {
             <div className={styles.left}>
               <Link to="/outputimages">
                 {" "}
-                <img src={backicon} alt="" style={{ marginRight: "2rem" }} />
+                <img src={backicon} alt="" style={{ marginRight: "2rem" }} className={styles.backIcon} />
               </Link>
             </div>
             <div className={styles.right}>
               <b className={styles.title}>Checkout</b>
-              <div className={styles.itemBox}>
-                <div className={styles.itemBoxLeft}>
-                  <img
-                    src={cartimage}
-                    alt=""
-                    className={`${styles.itemBoxLeftImg} img-fluid`}
-                  />
-                </div>
-                <div className={styles.itemBoxCenter}>
-                  <b className={styles.itemTitle}>Image on a Canvas</b>
-                  <div>
-                    <b className={styles.itemTitle2}>
-                      A4 (21 x 29.7 cm) w/ wooden frame
-                    </b>
-                  </div>
-                  <div>
-                    <span className={styles.itemTitle3}>AED 72.90</span>
-                  </div>
-                </div>
-                <div className={styles.itemBoxRight}>
-                  <div className="d-flex">
-                    <div
-                      style={{
-                        border: "1px solid",
-                        cursor: "pointer",
-                        padding: "0rem 0.3rem",
-                      }}
-                      onClick={handleDecrease}
-                    >
-                      <AiOutlineMinus />
-                    </div>
-                    <input
-                      type="number"
-                      value={quantity}
-                      min={1}
-                      max={10}
-                      readOnly
-                      className={styles.quantityInput}
-                    />
-                    <div
-                      style={{
-                        border: "1px solid",
-                        cursor: "pointer",
-                        padding: "0rem 0.3rem",
-                      }}
-                      onClick={handleIncrease}
-                    >
-                      <AiOutlinePlus />
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.itemMenu}>
-                  <CiMenuKebab />
-                </div>
-              </div>
               <div className={styles.itemBox}>
                 <div className={styles.itemBoxLeft}>
                   <img

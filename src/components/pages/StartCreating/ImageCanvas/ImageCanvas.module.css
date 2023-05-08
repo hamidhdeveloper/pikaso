@@ -125,3 +125,52 @@
    .creatnewbtn:hover{
     color: #eccb9c;
    }
+   @media (max-width: 1447px) {
+      html{
+        font-size: 70%;
+      }
+   }
+   @media (max-width: 1251px) {
+    html{
+      font-size: 60%;
+    }
+ }
+ @media (max-width: 1090px) {
+    html{
+      font-size: 50%;
+    }
+ }
+ @media (max-width:  1009px) {
+    html{
+      font-size: 50%;
+    }
+    .ImageCanvasConatiner{
+        justify-content: center;
+    }
+    .ImageCanvasConatinerRight{
+        justify-content: center;
+    }
+    .ImageCanvasConatinerLeft{
+        display: none;
+    }
+    .backicon{
+        height: 3rem;
+        margin-top: 1rem;
+        margin-right: 0rem !important;
+        }
+    
+ }
+ @media (max-width:   799px) {
+   .imageOnA{
+    font-size: 2.5rem;
+   }
+   .backicon{
+    height: 3rem;
+    margin-top: 1rem;
+    margin-right: 0rem !important;
+    }
+ }
+
+
+
+ 

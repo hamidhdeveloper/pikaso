@@ -74,7 +74,13 @@
   .enhanceArtworkButtomRight{
     width: 50%;
   }
-
+  @media screen and (max-width: 666px) {
+    .enhanceArtworkTop{
+      align-items: center;
+      justify-content: center;
+      gap:0.5rem;
+    }
+  }
   @media screen and (max-width: 600px) {
     html{
         font-size: 40%;

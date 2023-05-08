@@ -97,6 +97,8 @@
     } */
     .ownbottom {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .ownbottomLeft,.ownbottomRight{
         width: 91vw;

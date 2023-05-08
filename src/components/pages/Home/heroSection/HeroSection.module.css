@@ -33,7 +33,7 @@
 }
 .k,
 .w {
-  color: #edcda2;
+  color: #edcda2; 
 }
 .k {
   color: #eccb9c;
@@ -44,7 +44,7 @@
   position: absolute;
   height: 54.34%;
   width: 3.54%;
-  top: 25rem;
+  top: 50%;
   left: 17.4%;
   line-height: 3.5rem;
   text-align: center;
@@ -54,7 +54,7 @@
 .mAKContainer {
   height: 84.69%;
   width: 4.58%;
-  top: 8.03%;
+  top: 17%;
   left: 10.63%;
   color: #000;
 }
@@ -177,24 +177,132 @@
   background-size: cover;
 }
 /* responsive */
-@media (max-width: 964px) {
-  /* .mAKContainer{
-
-    top: 14.03%;
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-  .artwork{
-    top: 17rem;
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-  .aiGeneratedImages{
-    font-size: 2rem;
-    line-height: 2.5rem;
-  } */
+@media (max-width: 1530px) {
+ .aiGeneratedImagesWrapper{
+  left:78.15%
+ }
 
 }
+@media (max-width: 1293px) {
+ .aiGeneratedImagesWrapper{
+  left: 75.15%;
+ }
+ 
+ }
+ @media (max-width: 1162px) {
+  .aiGeneratedImagesWrapper{
+   display: none;
+  }
+  .artwork{
+    display: none;
+  }
+  .mAKContainer{
+    display: none;
+  }
+  .startNowbtn{
+    display: none;
+  }
+  .mobileView{
+    display: block;
+  }
+  .mobileView{
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .makeMobile{
+   font-weight: bold;
+   text-align: left;
+   font-size: 3.75rem;
+   color: #000;
+   text-shadow: 
+     1px  1px     #fff, 
+    -1px  1px     #fff, 
+     1px -1px     #fff, 
+    -1px -1px     #fff,
+     1px  1px 5px #555;
+  }
+  .artMobile{
+    font-size: 11.44rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow:     0 0.063rem 0 hsl(174,5%,80%),
+	                 0 2px 0 hsl(174,5%,75%),
+	                 0 3px 0 hsl(174,5%,70%),
+	                 0 4px 0 hsl(174,5%,66%),
+	                 0 5px 0 hsl(174,5%,64%),
+	                 0 6px 0 hsl(174,5%,62%),
+	                 0 7px 0 hsl(174,5%,61%),
+	                 0 8px 0 hsl(174,5%,60%),
+	
+	                 0 0 5px rgba(0,0,0,.05),
+	                0 1px 3px rgba(0,0,0,.2),
+	                0 3px 5px rgba(0,0,0,.2),
+	               0 5px 10px rgba(0,0,0,.2),
+	              0 10px 10px rgba(0,0,0,.2),
+	              0 20px 20px rgba(0,0,0,.3);
+  }
+  .startMobile{
+    background: rgb(255, 255, 255);
+    color: #000000;
+    width: 13rem;
+    font-size: 1rem;
+    font-weight: 100;
+    align-self: flex-end;
+    border: none;
+    z-index: 9;
+    margin-bottom: 1.5rem;
+    /* border-radius: 4px; */
+    text-decoration: none;
+    text-align: center;
+    padding: 0.4rem 0rem;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+  }
+
+  
+  
+  }
+  @media (max-width: 1023px) {
+      html{
+        font-size: 60% !important;
+      }
+  }
+  @media (max-width: 963px) {
+    html{
+      font-size: 50% !important;
+    }
+}
+@media (max-width: 567px) {
+  html{
+    font-size: 40% !important;
+  }
+}
+@media (max-width: 444px) {
+  html{
+    font-size: 30% !important;
+  }
+}
+@media (max-width: 337px) {
+  .herosection{
+    margin-top: -8rem;
+  }
+  html{
+    font-size: 25% !important;
+  }
+}
+  
+  @media screen and (min-width: 1163px) {
+    .mobileView{
+      display: none !important;
+    }
+
+  }
+ 
+  
+ 
+
 
 
 

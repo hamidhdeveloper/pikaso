@@ -4,7 +4,7 @@ import { Row, Col} from "react-bootstrap";
 import backicon from "../../../../assets/images/back-icon.svg";
 import frame from "../../../../assets/images/imageCanvasbg.png";
 import { AiOutlinePlus,AiOutlineMinus } from 'react-icons/ai';
-import { BsArrowRight } from 'react-icons/bs';
+import { BsArrowRight } from 'react-icons/bs'; 
 import { Link } from "react-router-dom";
 
 const ImageCanvas = ({ selectedImage, onClearImage }) => {
@@ -39,7 +39,7 @@ const ImageCanvas = ({ selectedImage, onClearImage }) => {
         </Col>
         <Col xs={12} md={8} className={styles.ImageCanvasConatinerRight}>
           <div className={styles.first}>
-           <Link onClick={handleClearImage}> <img src={backicon} alt="" style={{marginRight: '2rem'}}/></Link>
+           <Link onClick={handleClearImage}> <img src={backicon} alt="" style={{marginRight: '2rem'}} className={styles.backicon}/></Link>
           </div>
           <div className={styles.second}>
             <div>
