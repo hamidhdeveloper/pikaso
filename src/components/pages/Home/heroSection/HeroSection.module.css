@@ -205,6 +205,41 @@
   .mobileView{
     display: block;
   }
+  
+  
+  
+  }
+  /* @media (max-width: 1023px) {
+      html{
+        font-size: 60% !important;
+      }
+  }
+  @media (max-width: 963px) {
+    html{
+      font-size: 50% !important;
+    }
+}
+@media (max-width: 567px) {
+  html{
+    font-size: 40% !important;
+  }
+} */
+
+@media (max-width: 337px) {
+  .herosection{
+    margin-top: -8rem;
+  }
+  html{
+    font-size: 25% !important;
+  }
+}
+  
+  @media screen and (min-width: 1163px) {
+    .mobileView{
+      display: none !important;
+    }
+
+  }
   .mobileView{
     display: flex;
     flex-direction: column;
@@ -224,8 +259,9 @@
     -1px -1px     #fff,
      1px  1px 5px #555;
   }
+ 
   .artMobile{
-    font-size: 11.44rem;
+    font-size: 6rem;
     color: #fff;
     font-weight: bold;
     text-shadow:     0 0.063rem 0 hsl(174,5%,80%),
@@ -261,46 +297,11 @@
     box-shadow: 0 3px 3px rgba(0,0,0,0.2);
   }
 
-  
-  
-  }
-  @media (max-width: 1023px) {
-      html{
-        font-size: 60% !important;
-      }
-  }
-  @media (max-width: 963px) {
+  @media (min-width: 444px) {
     html{
-      font-size: 50% !important;
+      font-size: 90% !important;
     }
-}
-@media (max-width: 567px) {
-  html{
-    font-size: 40% !important;
   }
-}
-@media (max-width: 444px) {
-  html{
-    font-size: 30% !important;
-  }
-}
-@media (max-width: 337px) {
-  .herosection{
-    margin-top: -8rem;
-  }
-  html{
-    font-size: 25% !important;
-  }
-}
-  
-  @media screen and (min-width: 1163px) {
-    .mobileView{
-      display: none !important;
-    }
-
-  }
- 
-  
  
 
 
