@@ -9,7 +9,6 @@ export const Registeration = async (data, setLoading, setShowVerifyForm) => {
          setLoading(false);
          setShowVerifyForm(true);
     } catch (err) {
-        console.log("error", err);
         checkErr(err, setLoading)
     }
 }
