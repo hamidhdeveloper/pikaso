@@ -3,10 +3,9 @@ import styles from "./LoginPopup.module.css";
 import { Row, Col, Modal } from "react-bootstrap";
 import logo from '../../../assets/images/logo.png'
 import { Link } from "react-router-dom";
-import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from "../Loading/Loading";
+import { LoginU } from "../../../redux/actions/auth";
 
 const LoginPopup = ({showModal, setShowModal}) => {
   const [showLoading, setShowLoading] = useState(false);
@@ -70,57 +69,13 @@ const validatePassword = () => {
      
       // submit the form if there are no errors
       if (formIsValid) {
-        // console.log('Login successful!');
-        // call your API or redirect to another page
         setShowLoading(true)
-    const url =  `${process.env.REACT_APP_BASE_URL}api/v1/user/login`;
     const data = {
       email: email,
       password: password
     };
-    const headers = {
-      'Content-Type': 'application/json',
-      'ngrok-skip-browser-warning': 'true'
-    };
-  
-    try {
-      const response = await axios.post(url, data, { headers });
-      if (response.status === 200) {
-        const token = response.data.data.token;
-        localStorage.setItem('token', token);
-        toast.success('Successfully logged in!',{
-          position: "bottom-right",
-          autoClose: 4000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          style:{color:'#DFA968'}
-          });
-        // console.log('login successful');
-        setShowLoading(false)
-        setShowModal(false)
-      }
-      // console.log(response.data);
-    } catch (error) {
-      if (error.response.status === 400 || error.response.status === 401) {
-        setShowLoading(false)
-        toast.error('Invalid credentials! email or password is incorrect',{
-          position: "bottom-right",
-          autoClose: 4000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          style:{color:'black'}
-          });
-        // console.log('Invalid credentials! email or password is incorrect');
-      } else {
-        toast.error('Something went wrong please try again later');
-      }
-    }
+    LoginU(data, setShowLoading,setShowModal);
+    
       }
 
   }
@@ -128,7 +83,6 @@ const validatePassword = () => {
 
   return ( 
     <>
-    <ToastContainer />
     <Loading showLoading={showLoading} setShowLoading={setShowLoading}/>
       <Modal show={showModal} onHide={() => setShowModal(false)} >
         <Modal.Body className={styles.modalBody}>

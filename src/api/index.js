@@ -13,3 +13,12 @@ BaseURL.defaults.headers.common["ngrok-skip-browser-warning"] = "true";
 export const registration = async (data) => {
     return BaseURL.post(`api/v1/user/register`,  data);
 }
+export const verify = async (data) => {
+    return BaseURL.post(`api/v1/user/verify`,  data);
+}
+export const login = async (data) => {
+    return BaseURL.post(`api/v1/user/login`,  data);
+}
+export const resendOtp = async (data) => {
+    return BaseURL.post(`api/v1/user/resend`,  data);
+}
