@@ -4,60 +4,55 @@ import { Row, Col } from "react-bootstrap";
 import logo from "../../../../assets/images/logo.png";
 import VerifyForm from "./VerifyForm";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Loading from "../../Loading/Loading";
+import { errorToast, successToast } from "../../toast/Toast";
+import { Registeration } from "../../../../redux/actions/auth";
 
 const SignUp = () => {
   const [showVerifyForm, setShowVerifyForm] = useState(false);
   const [showLoading, setShowLoading] = useState(false);
 
-  const handleSignUpClick = () => {
-    setShowVerifyForm(true);
-  };
-  // for validation
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
-// for blur validation
-const handleEmailBlur = () => {
-  if (!email) {
-    setEmailError("Email is required");
-  } else if (!/\S+@\S+\.\S+/.test(email)) {
-    setEmailError("Email is invalid");
-  } else {
-    setEmailError("");
-  }
-}
 
-const handlePasswordBlur = () => {
-  if (!password) {
-    setPasswordError("Password is required");
-  } else if (password.length < 6) {
-    setPasswordError("At least 6 characters long");
-  } else {
-    setPasswordError("");
-  }
-}
+  const handleEmailBlur = () => {
+    if (!email) {
+      setEmailError("Email is required");
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      setEmailError("Email is invalid");
+    } else {
+      setEmailError("");
+    }
+  };
 
-const handleConfirmPasswordBlur = () => {
-  if (!confirmPassword) {
-    setConfirmPasswordError("Confirm password is required");
-  } else if (password !== confirmPassword) {
-    setConfirmPasswordError("Passwords do not match");
-  } else {
-    setConfirmPasswordError("");
-  }
-}
+  const handlePasswordBlur = () => {
+    if (!password) {
+      setPasswordError("Password is required");
+    } else if (password.length < 6) {
+      setPasswordError("At least 6 characters long");
+    } else {
+      setPasswordError("");
+    }
+  };
+
+  const handleConfirmPasswordBlur = () => {
+    if (!confirmPassword) {
+      setConfirmPasswordError("Confirm password is required");
+    } else if (password !== confirmPassword) {
+      setConfirmPasswordError("Passwords do not match");
+    } else {
+      setConfirmPasswordError("");
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     let formIsValid = true;
 
-    // validate email
     if (!email) {
       setEmailError("Email is required");
       formIsValid = false;
@@ -68,7 +63,6 @@ const handleConfirmPasswordBlur = () => {
       setEmailError("");
     }
 
-    // validate password
     if (!password) {
       setPasswordError("Password is required");
       formIsValid = false;
@@ -79,7 +73,6 @@ const handleConfirmPasswordBlur = () => {
       setPasswordError("");
     }
 
-    // validate confirm password
     if (!confirmPassword) {
       setConfirmPasswordError("Confirm password is required");
       formIsValid = false;
@@ -90,75 +83,19 @@ const handleConfirmPasswordBlur = () => {
       setConfirmPasswordError("");
     }
 
-    // submit the form if there are no errors
     if (formIsValid) {
-      // handleSignUpClick()
-      // console.log('Signup successful!');
       setShowLoading(true);
-      const url = `${process.env.REACT_APP_BASE_URL}api/v1/user/register`;
       const data = {
         email: email,
         password: password,
         confirmPassword: confirmPassword,
       };
-      const headers = {
-        "Content-Type": "application/json",
-        "ngrok-skip-browser-warning": "true",
-      };
-
-      try {
-        const response = await axios.post(url, data, { headers });
-        if (response.status === 200) {
-          toast.success("Verification code sent!", {
-            position: "bottom-right",
-            autoClose: 4000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            style:{color:'#DFA968'}
-            });
-          setShowLoading(false);
-          handleSignUpClick();
-        }
-      } catch (error) {
-        if(error.response.status === 400) {
-          setShowLoading(false);
-          toast.error("Invalid Parameter",{
-            position: "bottom-right",
-            autoClose: 4000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            style:{color:'black'}
-            });
-        }
-        else if (error.response.status === 409) {
-          setShowLoading(false);
-          toast.error("User already exists",{
-            position: "bottom-right",
-            autoClose: 4000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            style:{color:'black'}
-            });
-        } else {
-          setShowLoading(false);
-          toast.error("Something went wrong please try again later");
-        }
-      }
+      Registeration(data, setShowLoading, setShowVerifyForm);
     }
   };
 
   return (
     <>
-      <ToastContainer />
       <Loading showLoading={showLoading} setShowLoading={showLoading} />
 
       {!showVerifyForm && (
