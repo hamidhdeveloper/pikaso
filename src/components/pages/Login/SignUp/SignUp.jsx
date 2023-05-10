@@ -80,20 +80,19 @@ const SignUp = () => {
         const response = await axios.post(url, data, { headers });
         if (response.status === 200) {
           toast.success("Verification code sent!");
-          // console.log('Registration successful');
           setShowLoading(false);
           handleSignUpClick();
         }
-        // console.log(response.data);
       } catch (error) {
         if(error.response.status === 400) {
           setShowLoading(false);
           toast.error("Invalid Parameter");
         }
-        if (error.response.status === 409) {
+        else if (error.response.status === 409) {
           setShowLoading(false);
           toast.error("User already exists");
         } else {
+          setShowLoading(false);
           toast.error("Something went wrong please try again later");
         }
       }
