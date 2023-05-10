@@ -69,9 +69,18 @@ const VerifyForm = (props) => {
       const response = await axios.post(url, data, { headers });
       if (response.status === 200) {
         const token = response.data.data.token;
-        localStorage.setItem("token", token);
-        setShowLoading(false);
-        toast.success("Verification successful!");
+        localStorage.setItem('token', token);
+        setShowLoading(false)
+        toast.success('Verification successful!', {
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          style:{color:'#DFA968'}
+          });
         setTimeout(() => {
           navigate("/");
         }, 3000);
@@ -82,8 +91,25 @@ const VerifyForm = (props) => {
     } catch (error) {
       if (error?.response?.status === 400) {
         setShowLoading(false);
-        error?.response?.data?.isOtpMessage? toast.error("Verification code is incorrect") : toast.error("Invalid Parameters")
-        
+        error?.response?.data?.isOtpMessage? toast.error("Verification code is incorrect",{
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          style:{color:'black'}
+          }) : toast.error("Invalid Parameters",{
+            position: "bottom-right",
+            autoClose: 4000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            style:{color:'black'}
+            })
       } else if (error?.response?.status === 401) {
         setShowLoading(false);
         toast.error("User Does Not Exist.");

@@ -23,6 +23,31 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+// validate on blur function
+const validateEmail = () => {
+  if (!email) {
+    setEmailError('Email is required');
+    return false;
+  } else if (!/\S+@\S+\.\S+/.test(email)) {
+    setEmailError('Email is invalid');
+    return false;
+  } else {
+    setEmailError('');
+    return true;
+  }
+};
+const validatePassword = () => {
+  if (!password) {
+    setPasswordError('Password is required');
+    return false;
+  } else if (password.length < 6) {
+    setPasswordError('At least 6 characters long');
+    return false;
+  } else {
+    setPasswordError('');
+    return true;
+  }
+};
 
   const handleSubmit = async(e) => {
     e.preventDefault();
@@ -80,6 +105,7 @@ const Login = () => {
               progress: undefined,
               style:{color:'#DFA968'}
               });
+              
               setShowLoading(false)
               navigate('/');
             // console.log('login successful');
@@ -107,6 +133,7 @@ const Login = () => {
       }
 
   }
+
   return (
     <>
     <ToastContainer />
@@ -130,11 +157,11 @@ const Login = () => {
               </div>
               <form onSubmit={handleSubmit} className={styles.myform}>
               <div style={{position:'relative'}}>
-                <input type="email" placeholder="Email" className={styles.username} value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input type="email" placeholder="Email" className={styles.username} value={email} onChange={(e) => setEmail(e.target.value)} onBlur={validateEmail} on="true"/>
                 {emailError && <p style={{ color: 'red',fontSize: '0.8rem',textAlign: 'right',position: 'absolute',top: '1rem',right: '1rem' }}>{emailError}</p>}
               </div>
               <div style={{position:'relative'}}>
-                <input type="password" placeholder="Password" className={styles.username} value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <input type="password" placeholder="Password" className={styles.username} value={password} onChange={(e) => setPassword(e.target.value)} onBlur={validatePassword} on="true"/>
                 {passwordError && <p style={{ color: 'red',fontSize: '0.8rem',textAlign: 'right',position: 'absolute',top: '1rem',right: '1rem' }}>{passwordError}</p>}
               </div>
               <div className={styles.forgotcol}>
