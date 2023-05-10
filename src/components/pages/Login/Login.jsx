@@ -8,7 +8,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from "../Loading/Loading";
-
+import { errorToast, successToast } from '../toast/Toast';
 const Login = () => {
   const navigate = useNavigate();
   const [showForgotForm, setShowForgotForm] = useState(false);
@@ -95,16 +95,7 @@ const validatePassword = () => {
           if (response.status === 200) {
             const token = response.data.data.token;
             localStorage.setItem('token', token);
-            toast.success('Successfully logged in!', {
-              position: "bottom-right",
-              autoClose: 4000,
-              hideProgressBar: true,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              style:{color:'#DFA968'}
-              });
+            successToast('Successfully logged in!');
               
               setShowLoading(false)
               navigate('/');
@@ -114,16 +105,7 @@ const validatePassword = () => {
         } catch (error) { 
           if (error.response.status === 400 || error.response.status === 401) {
             
-            toast.error('Invalid credentials!',{
-              position: "bottom-right",
-              autoClose: 4000,
-              hideProgressBar: true,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              style:{color:'black'}
-              });
+            errorToast('Invalid credentials!');
               setShowLoading(false)
             // console.log('Invalid credentials! email or password is incorrect');
           } else {
@@ -136,7 +118,7 @@ const validatePassword = () => {
 
   return (
     <>
-    <ToastContainer />
+    
     <Loading showLoading={showLoading}setShowLoading={showLoading} />
     {!showForgotForm ? (
       <>
