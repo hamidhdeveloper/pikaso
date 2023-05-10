@@ -22,6 +22,36 @@ const SignUp = () => {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
+// for blur validation
+const handleEmailBlur = () => {
+  if (!email) {
+    setEmailError("Email is required");
+  } else if (!/\S+@\S+\.\S+/.test(email)) {
+    setEmailError("Email is invalid");
+  } else {
+    setEmailError("");
+  }
+}
+
+const handlePasswordBlur = () => {
+  if (!password) {
+    setPasswordError("Password is required");
+  } else if (password.length < 6) {
+    setPasswordError("At least 6 characters long");
+  } else {
+    setPasswordError("");
+  }
+}
+
+const handleConfirmPasswordBlur = () => {
+  if (!confirmPassword) {
+    setConfirmPasswordError("Confirm password is required");
+  } else if (password !== confirmPassword) {
+    setConfirmPasswordError("Passwords do not match");
+  } else {
+    setConfirmPasswordError("");
+  }
+}
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -79,7 +109,16 @@ const SignUp = () => {
       try {
         const response = await axios.post(url, data, { headers });
         if (response.status === 200) {
-          toast.success("Verification code sent!");
+          toast.success("Verification code sent!", {
+            position: "bottom-right",
+            autoClose: 4000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            style:{color:'#DFA968'}
+            });
           // console.log('Registration successful');
           setShowLoading(false);
           handleSignUpClick();
@@ -88,11 +127,29 @@ const SignUp = () => {
       } catch (error) {
         if(error.response.status === 400) {
           setShowLoading(false);
-          toast.error("Invalid Parameter");
+          toast.error("Invalid Parameter",{
+            position: "bottom-right",
+            autoClose: 4000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            style:{color:'black'}
+            });
         }
         if (error.response.status === 409) {
           setShowLoading(false);
-          toast.error("User already exists");
+          toast.error("User already exists",{
+            position: "bottom-right",
+            autoClose: 4000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            style:{color:'black'}
+            });
         } else {
           toast.error("Something went wrong please try again later");
         }
@@ -128,6 +185,7 @@ const SignUp = () => {
                     className={styles.username}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    onBlur={handleEmailBlur}
                   />
                   {emailError && (
                     <p
@@ -151,6 +209,7 @@ const SignUp = () => {
                     className={styles.username}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    onBlur={handlePasswordBlur}
                   />
                   {passwordError && (
                     <p
@@ -174,6 +233,7 @@ const SignUp = () => {
                     className={styles.username}
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
+                    onBlur={handleConfirmPasswordBlur}
                   />
                   {confirmPasswordError && (
                     <p

@@ -80,7 +80,16 @@ const VerifyForm = (props) => {
         const token = response.data.data.token;
         localStorage.setItem('token', token);
         setShowLoading(false)
-        toast.success('Verification successful!');
+        toast.success('Verification successful!', {
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          style:{color:'#DFA968'}
+          });
         setTimeout(() => {
           navigate('/');
         }, 3000);
@@ -91,7 +100,16 @@ const VerifyForm = (props) => {
     } catch (error) {
       if (error.response.status === 400) {
         setShowLoading(false);
-        toast.error('Verification code is incorrect. Please try again.');
+        toast.error('Verification code is incorrect. Please try again.',{
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          style:{color:'black'}
+          });
         // console.log('Verification code is incorrect. Please try again.');
 
       } else {

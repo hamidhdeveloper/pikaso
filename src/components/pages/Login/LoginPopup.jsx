@@ -17,6 +17,31 @@ const LoginPopup = ({showModal, setShowModal}) => {
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
 
+  // validate on blur function
+const validateEmail = () => {
+  if (!email) {
+    setEmailError('Email is required');
+    return false;
+  } else if (!/\S+@\S+\.\S+/.test(email)) {
+    setEmailError('Email is invalid');
+    return false;
+  } else {
+    setEmailError('');
+    return true;
+  }
+};
+const validatePassword = () => {
+  if (!password) {
+    setPasswordError('Password is required');
+    return false;
+  } else if (password.length < 6) {
+    setPasswordError('At least 6 characters long');
+    return false;
+  } else {
+    setPasswordError('');
+    return true;
+  }
+};
   const handleSubmit = async(e) => {
     e.preventDefault();
     let formIsValid = true;
@@ -63,16 +88,34 @@ const LoginPopup = ({showModal, setShowModal}) => {
       if (response.status === 200) {
         const token = response.data.data.token;
         localStorage.setItem('token', token);
-        toast.success('Successfully logged in!');
+        toast.success('Successfully logged in!',{
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          style:{color:'#DFA968'}
+          });
         // console.log('login successful');
         setShowLoading(false)
         setShowModal(false)
       }
       // console.log(response.data);
     } catch (error) {
-      if (error.response.status === 400) {
+      if (error.response.status === 400 || error.response.status === 401) {
         setShowLoading(false)
-        toast.error('Invalid credentials! email or password is incorrect');
+        toast.error('Invalid credentials! email or password is incorrect',{
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          style:{color:'black'}
+          });
         // console.log('Invalid credentials! email or password is incorrect');
       } else {
         toast.error('Something went wrong please try again later');
@@ -106,11 +149,11 @@ const LoginPopup = ({showModal, setShowModal}) => {
               </div>
               <form onSubmit={handleSubmit} className={styles.myform}>
               <div style={{position:'relative'}}>
-                <input type="email" placeholder="Email" className={styles.username} value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input type="email" placeholder="Email" className={styles.username} value={email} onChange={(e) => setEmail(e.target.value)} onBlur={validateEmail}/>
                 {emailError && <p style={{ color: 'red',fontSize: '0.8rem',textAlign: 'right',position: 'absolute',top: '1rem',right: '1rem' }}>{emailError}</p>}
               </div>
               <div style={{position:'relative'}}>
-                <input type="password" placeholder="Password" className={styles.username} value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <input type="password" placeholder="Password" className={styles.username} value={password} onChange={(e) => setPassword(e.target.value)} onBlur={validatePassword}/>
                 {passwordError && <p style={{ color: 'red',fontSize: '0.8rem',textAlign: 'right',position: 'absolute',top: '1rem',right: '1rem' }}>{passwordError}</p>}
               </div>
               <div className={styles.forgotcol}>
