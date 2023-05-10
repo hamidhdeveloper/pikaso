@@ -3,12 +3,11 @@ import styles from "./SignUp.module.css";
 import { Row, Col } from "react-bootstrap";
 import logo from "../../../../assets/images/logo.png";
 import VerifyForm from "./VerifyForm";
-import axios from "axios";
 import Loading from "../../Loading/Loading";
-import { errorToast, successToast } from "../../toast/Toast";
 import { Registeration } from "../../../../redux/actions/auth";
 
 const SignUp = () => {
+
   const [showVerifyForm, setShowVerifyForm] = useState(false);
   const [showLoading, setShowLoading] = useState(false);
 

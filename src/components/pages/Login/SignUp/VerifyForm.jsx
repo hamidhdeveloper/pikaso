@@ -3,15 +3,14 @@ import styles from "./VerifyForm.module.css";
 import { Row, Col } from "react-bootstrap";
 import logo from "../../../../assets/images/logo.png";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-
+import { Verify , ResendOtp } from "../../../../redux/actions/auth";
 import { InputGroup, FormControl } from "react-bootstrap";
 import Loading from "../../Loading/Loading";
 
+
 const VerifyForm = (props) => {
+  
   const navigate = useNavigate();
 
   const [codeComplete, setCodeComplete] = useState(false);
@@ -56,104 +55,24 @@ const VerifyForm = (props) => {
     const useremail = props.email; // get the email from the user input
     const usercode = code;
 
-    const url = `${process.env.REACT_APP_BASE_URL}api/v1/user/verify`;
     const data = {
       email: useremail,
       otp: usercode,
     };
-    const headers = {
-      "Content-Type": "application/json",
-      "ngrok-skip-browser-warning": "true",
-    };
-
-    try {
-      const response = await axios.post(url, data, { headers });
-      if (response.status === 200) {
-        const token = response.data.data.token;
-        localStorage.setItem('token', token);
-        setShowLoading(false)
-        toast.success('Verification successful!', {
-          position: "bottom-right",
-          autoClose: 4000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          style:{color:'#DFA968'}
-          });
-        setTimeout(() => {
-          navigate("/");
-        }, 3000);
-
-        // console.log('Verification successful!');
-      }
-      // console.log(response.data);
-    } catch (error) {
-      if (error?.response?.status === 400) {
-        setShowLoading(false);
-        error?.response?.data?.isOtpMessage? toast.error("Verification code is incorrect",{
-          position: "bottom-right",
-          autoClose: 4000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          style:{color:'black'}
-          }) : toast.error("Invalid Parameters",{
-            position: "bottom-right",
-            autoClose: 4000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            style:{color:'black'}
-            })
-      } else if (error?.response?.status === 401) {
-        setShowLoading(false);
-        toast.error("User Does Not Exist.");
-      }  else {
-        setShowLoading(false);
-        toast.error("Something went wrong please try again later.");
-      }
-    }
-  };
+    Verify(data, setShowLoading,() => {navigate("/")});
+  }
   // resend otp
   const resendOtp = async () => {
     setShowLoading(true);
     const useremail = props.email;
-    const url = "https://f3d8-46-152-254-202.ngrok-free.app/api/v1/user/resend";
     const data = {
       email: useremail,
     };
-    const headers = {
-      "Content-Type": "application/json",
-      "ngrok-skip-browser-warning": "true",
-    };
-
-    try {
-      const response = await axios.post(url, data, { headers });
-      if (response.status === 200) {
-        toast.success("Verification code resent!");
-        setShowLoading(false);
-      }
-      // console.log(response.data);
-    } catch (error) {
-      if (error.response.status === 409) {
-        setShowLoading(false);
-        toast.error("Something went wrong please try again");
-        // console.log('Something went wrong please try again');
-      } else {
-        toast.error("Something went wrong please try again later");
-      }
-    }
+    ResendOtp(data, setShowLoading);
   };
 
   return (
     <>
-      <ToastContainer />
       <Loading showLoading={showLoading} setShowLoading={showLoading} />
       <Row className={styles.loginContainer}>
         <Col xs={12} md={12} className={styles.closebtn}></Col>

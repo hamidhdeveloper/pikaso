@@ -4,11 +4,10 @@ import { Row, Col } from "react-bootstrap";
 import logo from '../../../assets/images/logo.png'
 import { Link , useNavigate } from "react-router-dom";
 import ForgotPassword from "./ForgotPassword/ForgotPassword";
-import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from "../Loading/Loading";
-import { errorToast, successToast } from '../toast/Toast';
+import { LoginU } from "../../../redux/actions/auth";
+
 const Login = () => {
   const navigate = useNavigate();
   const [showForgotForm, setShowForgotForm] = useState(false);
@@ -77,41 +76,15 @@ const validatePassword = () => {
      
       // submit the form if there are no errors
       if (formIsValid) {
-        // console.log('Login successful1!');
-        // call your API or redirect to another page'
         setShowLoading(true)
-        const url =  `${process.env.REACT_APP_BASE_URL}api/v1/user/login`;
+        
         const data = {
           email: email,
           password: password
         };
-        const headers = {
-          'Content-Type': 'application/json',
-          'ngrok-skip-browser-warning': 'true'
-        };
+    
+        LoginU(data, setShowLoading,() => {navigate("/")});
       
-        try {
-          const response = await axios.post(url, data, { headers });
-          if (response.status === 200) {
-            const token = response.data.data.token;
-            localStorage.setItem('token', token);
-            successToast('Successfully logged in!');
-              
-              setShowLoading(false)
-              navigate('/');
-            // console.log('login successful');
-          }
-          // console.log(response.data);
-        } catch (error) { 
-          if (error.response.status === 400 || error.response.status === 401) {
-            
-            errorToast('Invalid credentials!');
-              setShowLoading(false)
-            // console.log('Invalid credentials! email or password is incorrect');
-          } else {
-            toast.error('Something went wrong please try again later');
-          }
-        }
       }
 
   }
