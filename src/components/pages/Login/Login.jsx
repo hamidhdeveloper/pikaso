@@ -12,16 +12,17 @@ const Login = () => {
   const navigate = useNavigate();
   const [showForgotForm, setShowForgotForm] = useState(false);
   const [showLoading, setShowLoading] = useState(false);
-  
 
   const handleForgotClick = () => {
     setShowForgotForm(true);
   };
-  // for login validation
+
+// for login validation
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+
 // validate on blur function
 const validateEmail = () => {
   if (!email) {
@@ -35,6 +36,7 @@ const validateEmail = () => {
     return true;
   }
 };
+
 const validatePassword = () => {
   if (!password) {
     setPasswordError('Password is required');
@@ -52,7 +54,7 @@ const validatePassword = () => {
     e.preventDefault();
     let formIsValid = true;
     
-      // validate email
+// validate email
       if (!email) {
         setEmailError('Email is required');
         formIsValid = false;
@@ -62,8 +64,8 @@ const validatePassword = () => {
       } else {
         setEmailError('');
       }
-  
-      // validate password
+
+// validate password
       if (!password) {
         setPasswordError('Password is required');
         formIsValid = false;
@@ -74,7 +76,7 @@ const validatePassword = () => {
         setPasswordError('');
       }
      
-      // submit the form if there are no errors
+// submit the form if there are no errors
       if (formIsValid) {
         setShowLoading(true)
         
@@ -82,25 +84,20 @@ const validatePassword = () => {
           email: email,
           password: password
         };
-    
         LoginU(data, setShowLoading,() => {navigate("/")});
-      
       }
 
   }
 
   return (
     <>
-    
     <Loading showLoading={showLoading}setShowLoading={showLoading} />
     {!showForgotForm ? (
       <>
         <Row className={styles.loginContainer}>
-        
             <Col xs={12} md={12} className={styles.closebtn}>
             </Col> 
         </Row>
-        
           <Row className={styles.loginContainer}>
             <Col xs={12} md={6} className={styles.loginContainerLeft}>
               <img src={logo} alt="" />
@@ -129,11 +126,8 @@ const validatePassword = () => {
                <Link to='/signup' className={styles.signupbtn}>Sign Up</Link>
               </div>
               </form>
-    
-
             </Col>
             <Col xs={12} md={6} className={styles.loginContainerRight}>
-              
             </Col>
           </Row>
       </>
@@ -142,7 +136,6 @@ const validatePassword = () => {
       <ForgotPassword />
       </>
     )}
-    
     </>
   )
 }
