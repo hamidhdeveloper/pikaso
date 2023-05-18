@@ -18,16 +18,11 @@ function App() {
     <Header />
     <Routes>
         <Route path="/" element={ <Home /> } />
-        {/* <Route  path="startcreating" element={<StartCreating />}>
-          <Route path="outputimages" element={<OutputImages />} />
-        </Route> */}
         <Route path="startcreating" element={ <StartCreating/> } />
         <Route path="outputimages" element={ <OutputImages /> } />
         <Route path="login" element={ <Login /> } />
         <Route path="signup" element={ <SignUp /> } />
         <Route path="cart" element={ <Cart /> } />
-        
-       
     </Routes>    
     </div>
     </Container>

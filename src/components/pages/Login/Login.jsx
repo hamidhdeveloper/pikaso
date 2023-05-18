@@ -79,7 +79,7 @@ const validatePassword = () => {
 // submit the form if there are no errors
       if (formIsValid) {
         setShowLoading(true)
-        
+
         const data = {
           email: email,
           password: password

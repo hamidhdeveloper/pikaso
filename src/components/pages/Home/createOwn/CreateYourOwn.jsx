@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./CreateYourOwn.module.css";
 import rectangle from "../../../../assets/images/rectangle-30756@2x.png";
+import { Link } from "react-router-dom";
 // import rectangle5 from '../../../../assets/images/rectangle-5.svg'
 
 const CreateYourOwn = () => {
@@ -34,7 +35,7 @@ const CreateYourOwn = () => {
             generator now.
           </p>
         </div>
-        <button className={styles.startNowbtn}>{`Generate `}</button>
+        <Link to='/startcreating' className={styles.startNowbtn}>{`Generate `}</Link>
           </div>
         </div>
       </div>

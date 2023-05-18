@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./EnhanceArtwork.module.css";
 import rectangle1 from "../../../../assets/images/rectangle-30760@2x.png";
 import rectangle2 from "../../../../assets/images/rectangle-30772@2x.png";
+import { Link } from "react-router-dom";
 const EnhanceArtwork = () => {
   return (
     <>
@@ -32,7 +33,7 @@ const EnhanceArtwork = () => {
           </div>
 
           <div className={styles.vectorParent}>
-            <button className={styles.startNowbtn}>{`Generate `}</button>
+            <Link to='/startcreating' className={styles.startNowbtn}>{`Generate `}</Link>
           </div>
         </div>
       </div>

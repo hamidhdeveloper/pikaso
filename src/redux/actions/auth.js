@@ -4,6 +4,7 @@ import checkErr from "./error_func";
 
 export const Registeration = async (data, setLoading, setShowVerifyForm) => {
     try {
+        // eslint-disable-next-line
          const result = await registration(data);
          successToast('Verification code sent!');
          setLoading(false);
@@ -15,6 +16,7 @@ export const Registeration = async (data, setLoading, setShowVerifyForm) => {
 
 export const Verify = async (data, setLoading,onSuccess) => {
     try {
+        // eslint-disable-next-line
          const result = await verify(data);
          successToast('Verification successful!');
          setLoading(false);
@@ -27,7 +29,7 @@ export const Verify = async (data, setLoading,onSuccess) => {
 
 export const LoginU = async (data, setLoading,onSuccess,setShowModal) => {
     try {
-        
+        // eslint-disable-next-line
          const result = await login(data);
          successToast('Successfully logged in!');
          setLoading(false);
@@ -44,6 +46,7 @@ export const LoginU = async (data, setLoading,onSuccess,setShowModal) => {
 
 export const ResendOtp = async (data, setLoading) => {
     try {
+        // eslint-disable-next-line
          const result = await resendOtp(data);
          successToast('Verification code resent!');
          setLoading(false);
