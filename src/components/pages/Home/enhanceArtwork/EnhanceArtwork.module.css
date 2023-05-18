@@ -1,0 +1,92 @@
+.rk {
+    color: #000;
+  }
+  .creating {
+    display: inline-block;
+  }
+  .start {
+    line-height: 1rem;
+    font-size: 2.5rem;
+    color: #000;
+  }
+  .enhanceArtworkChild,
+  .enhanceArtworkItem {
+    
+    border-radius: 17px;
+    width: 50%;
+    object-fit: cover;
+    width: 100%;
+  }
+  .enhanceArtworkItem {
+    width: 100%;
+  }
+  
+  .vectorParent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+  }
+  .startNowbtn{
+    background: black;
+      color: #fff;
+      height: 2rem;
+      width: 13rem;
+      font-size: 1rem;
+      font-weight: 100;
+      align-self: flex-end;
+      border: none;
+      z-index: 9;
+      margin: 2rem 0rem;
+      border-radius: 4px;
+      text-decoration: none;
+    text-align: center;
+    padding: 0.4rem 0rem;
+
+  }
+  
+  .enhanceartwork {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    font-size: 4rem;
+    color: #adadad;
+    font-family: 'Poppins';
+  }
+  .enhanceArtworkTop{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0rem 5rem;
+    margin-top: 4rem;
+    flex-direction: column;
+  }
+  .enhanceArtworkButtom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0rem 4rem;
+  }
+  .enhanceArtworkButtomLeft{
+    width: 50%;
+  }
+  .enhanceArtworkButtomRight{
+    width: 50%;
+  }
+  @media screen and (max-width: 666px) {
+    .enhanceArtworkTop{
+      align-items: center;
+      justify-content: center;
+      gap:0.5rem;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    html{
+        font-size: 40%;
+    }
+  }
+  

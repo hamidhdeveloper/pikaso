@@ -1,0 +1,101 @@
+
+.loginContainer{ 
+
+}
+.loginContainerLeft{
+   height: 90vh;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    
+}
+.loginContainerLeft img{
+    height: 7rem;
+    margin: 3rem 0rem;
+}
+.welcomeToText{
+    text-align: left;
+    font-size: 1.88rem;
+    color: #737373;
+    font-weight: 500;
+}
+.spanText{
+    font-size: 2.13rem;
+    color: #000;
+    font-weight: bold;
+}
+.username{
+    font-size: 0.94rem;
+    color: #393939;
+    border: none;
+    padding: 1rem 12rem 1rem 1rem;
+    background: #F9F9F9;
+    border-radius: 0.4rem;
+}
+.username:focus{
+    
+    outline:1px solid #393939;
+
+}
+.loginContainerRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #F1F0EE; */
+    background-image: url('../../../../assets/images/login.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    object-fit: cover;
+    background-size: cover;
+    flex-direction: column;
+}
+.forgotThePasswordText{
+    color: #393939;
+    font-size: 0.63rem;
+}
+.forgotThePasswordText a{
+    text-decoration: none;
+    color: #393939;
+    font-size: 0.63rem;
+}
+.forgotcol{
+    align-self: flex-end;
+    padding: 0rem 16.5rem;
+    margin-top: -1rem;
+}
+.loginbtn{
+    font-weight: bold;
+    font-size: 0.94rem;
+    color: #fff;
+    text-decoration: none;
+    background: #000;
+    border-radius: 0.4rem;
+    padding: 1rem 9.6rem;
+    border: none;
+}
+.loginbtn:hover{
+    color:#DFA968;
+}
+.signupbtn{
+    text-decoration: none;
+    font-size: 0.94rem;
+    color: #000;
+    font-weight: 500;
+    border: 1px solid #000;
+    border-radius: 0.4rem;
+    padding: 1rem 9.4rem;
+    border: none;
+}
+.signupbtn:hover{
+    color:#DFA968;
+}
+.myform{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+
+
+  

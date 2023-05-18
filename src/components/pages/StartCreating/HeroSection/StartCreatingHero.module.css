@@ -1,0 +1,48 @@
+  .startCreatingContainer {
+    overflow: hidden;
+    text-align: left;
+    font-size: 6.56rem;
+    color: white;
+    font-family: 'Poppins';
+    background-image: url('../../../../assets/images/watercolor-brush-strokes-with-rainbow-colors.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    margin-top: -7rem;
+    padding: 5rem 0rem;
+  }
+ 
+  .startCreatingContainer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .startCreatingText {}
+
+  .justWriteWhatText {
+    text-align: center;
+    font-size: 2.13rem;
+    font-weight: 500;
+  }
+
+  /* responsive */
+  @media (max-width: 395px) {
+    html {
+      font-size: 40%;
+    }
+
+    .startCreatingText {
+      text-align: center;
+      line-height: 6rem;
+      font-size: 4.56rem;
+    }
+
+  }
+  @media (max-width: 395px) {
+    html {
+      font-size: 20%;
+    }
+  }

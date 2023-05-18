@@ -1,0 +1,143 @@
+.modalBody{
+    padding: 0;
+    
+}
+.closebtn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.loginContainer{
+
+}
+.loginContainerLeft{
+   
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.loginContainerLeft img{
+    height: 7rem;
+    margin: 3rem 0rem;
+}
+.welcomeToText{
+    text-align: left;
+    font-size: 1.88rem;
+    color: #737373;
+    font-weight: 500;
+}
+.spanText{
+    font-size: 2.13rem;
+    color: #000;
+    font-weight: bold;
+}
+.username{
+    font-size: 0.94rem;
+    color: #393939;
+    border: none;
+    padding: 1rem 12rem 1rem 1rem;
+    background: #F9F9F9;
+    border-radius: 0.4rem;
+}
+.username:focus{
+    
+    outline:1px solid #393939;
+
+}
+.loginContainerRight{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #F1F0EE; */
+    background-image: url('../../../assets/images/login.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    object-fit: cover;
+    background-size: cover;
+    flex-direction: column;
+}
+.forgotThePasswordText{
+    color: #393939;
+    font-size: 0.63rem;
+}
+.forgotThePasswordText a{
+    text-decoration: none;
+    color: #393939;
+    font-size: 0.63rem;
+}
+.forgotcol{
+    width: 22.2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.loginbtn{
+    font-weight: bold;
+    font-size: 0.94rem;
+    color: #fff;
+    text-decoration: none;
+    background: #000;
+    border-radius: 0.4rem;
+    padding: 1rem 10.1rem;
+    border: none;
+}
+.loginbtn:hover{
+    color:#DFA968;
+}
+.signupbtn{
+    text-decoration: none;
+    font-size: 0.94rem;
+    color: #000;
+    font-weight: 500;
+    border: 1px solid #000;
+    border-radius: 0.4rem;
+    padding: 1rem 9.5rem;
+}
+.signupbtn:hover{
+    color:#DFA968;
+}
+.myform{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+/* responsive */
+@media (max-width: 767px) {
+    .signupbtnContainer{
+        margin-top: 1rem !important;
+       }
+ }
+@media (max-width: 349px) {
+   .welcomeToText{
+    font-size: 1.3rem;
+   }
+   .spanText{
+    font-size: 1.5rem;
+   }
+   .username{
+    padding: 1rem 10rem 1rem 1rem;
+   }
+   .loginbtn{
+    padding: 1rem 9rem;
+   }
+   .signupbtn{
+    padding: 1rem 8.4rem;
+   }
+   .signupbtnContainer{
+    margin-top: 0rem !important;
+   }
+   .loginContainerLeft img{
+    margin: 2rem 0rem;
+   }
+   .forgotcol{
+    width: 20rem;
+   }
+
+}
+
+
+
+
+  

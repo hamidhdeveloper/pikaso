@@ -1,0 +1,132 @@
+.createown {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    font-size: 4rem;
+    color: #adadad;
+    font-family: 'Poppins';
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .owntop{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* height: 15rem; */
+    width: 100%;
+    /* background-color: red; */
+  }
+  .owntop b{
+    display: flex;
+    align-items: center;
+    /* margin-left: 8rem; */
+  }
+  .start{
+    font-size: 2.5rem;
+    color: #000000;
+  
+  }
+  .creating{
+    margin-top: -1.5rem;
+  }
+  .creating span{
+    font-size: 5rem;
+  }
+  .wn{
+    color: #000000;
+  }
+  .ownbottom{
+    display: flex;
+    /* height: 30rem; */
+    width: 100%;
+    /* background-color: rgb(9, 197, 112); */
+  }
+  .groupChild {
+    border-radius: 17px;
+    width: 100%;
+    /* height: 21rem; */
+    object-fit: cover;
+  }
+  .ownbottomLeft{
+    /* height: 30rem; */
+    width: 50%;
+    /* background-color: red; */
+   padding-left: 4rem;
+  }
+  .ownbottomRight{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+    padding: 0rem 4rem;
+    /* height: 30rem; */
+    /* background-color: blue; */
+  }
+  .aiImageGeneratorContainer {
+    
+    font-size: 2rem;
+    color: #000;
+  }
+  .nowItsAi {
+    font-size: 1.1rem;
+    line-height: 2.3rem;
+    color: #565656;
+  }
+  .startNowbtn{
+     background: black;
+      color: #fff;
+      height: 2rem;
+      width: 13rem;
+      font-size: 1rem;
+      font-weight: 100;
+      border: none;
+      z-index: 9;
+      border-radius: 4px;
+      text-decoration: none;
+    text-align: center;
+    padding: 0.4rem 0rem;
+  }
+  /* responsive  */
+@media screen and (max-width: 666px) {
+    /* html{
+      font-size: 60%;
+    } */
+    .ownbottom {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ownbottomLeft,.ownbottomRight{
+        width: 91vw;
+        text-align: center;
+        padding: 3rem 3rem;
+    }
+    .owntop{
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        padding-top: 4rem;
+    }
+    .owntop b{
+        margin-left: 0;
+    }
+    .startNowbtn{
+        align-self: center;
+    }
+    .owntop b,.owntop b span{
+        font-size: 3rem;
+    }
+
+  }
+  @media screen and (max-width: 338px) {
+    .owntop b,.owntop b span{
+        font-size: 2rem;
+    }
+  }

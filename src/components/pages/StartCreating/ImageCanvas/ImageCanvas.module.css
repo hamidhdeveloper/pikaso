@@ -1,0 +1,176 @@
+.ImageCanvasConatiner{
+  /* height: 67.5rem; */
+  overflow: hidden;
+  text-align: left;
+  font-size: 1.56rem;
+  color: #000;
+} 
+.ImageCanvasConatinerLeft{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+    height: 55rem;
+   /* background-image: url('../../../../assets/images/imageCanvasbg.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    object-fit: cover;
+    background-size: cover; */
+    
+}
+/* .ConatinerLeftImage{
+    width: 36rem;
+    height: 55rem;
+    overflow: hidden;
+} */
+.selecteimgfrmae{
+    width: 34rem;
+    height: 51rem;
+    left: 0;
+    position: absolute;
+    bottom: 4.1rem;
+    z-index: 9;
+    object-fit: cover;
+    
+}
+.buttomframe{
+    width: 38rem;
+    position: absolute;
+    bottom: -9.6rem;
+    left: -0.2rem;
+    object-fit: cover;
+    
+}
+.ImageCanvasConatinerRight{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 3rem;
+    gap: 0rem 4rem;
+}
+.imageOnA{
+    font-size: 3.13rem;
+    font-weight: bold;
+}
+.sampleView{
+    font-size: 1.13rem;
+  color: #707070;
+}
+.frame{
+    width: 22rem;
+    height: 29rem;
+    background-image: url('../../../../assets/images/frame-bg.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    object-fit: cover;
+    background-size: cover;
+    overflow: hidden;
+    padding: 1.7rem;
+    margin-bottom: 2rem;
+    
+}
+.frame img{
+    width: 18.9rem;
+    height: 25.7rem;
+    object-fit: cover;
+}
+.printInkjet span{
+    color: #707070;
+    font-size: 1.56rem;
+}
+.pspan{
+    color: #000 !important;
+    font-size: 1.56rem;
+}
+.quantityInput{
+    border: none;
+    background: none;
+    padding-left: 2.5rem;
+}
+.third{
+    
+    align-self: flex-end;
+    margin-bottom: 2.2rem;
+}
+.aed7290{
+    font-size: 3.13rem;
+    color: #707070;
+}
+.spanPrice{
+    color: #000;
+}
+
+.checkoutbtn{
+    font-weight: 500;
+    font-size: 1.44rem;
+    font-size: 1.44rem;
+    padding: 0.63rem 3rem;
+    background-color: #242424;
+    color: #fff;
+    text-decoration: none;
+   }
+   .checkoutbtn:hover{
+    color: #eccb9c;
+   }
+   .creatnewbtn{
+    font-weight: 500;
+    font-size: 1.44rem;
+    font-size: 1.44rem;
+    padding: 0.63rem 3.1rem;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border: 1px solid #000;
+   }
+   .creatnewbtn:hover{
+    color: #eccb9c;
+   }
+   @media (max-width: 1447px) {
+      html{
+        font-size: 70%;
+      }
+   }
+   @media (max-width: 1251px) {
+    html{
+      font-size: 60%;
+    }
+ }
+ @media (max-width: 1090px) {
+    html{
+      font-size: 50%;
+    }
+ }
+ @media (max-width:  1009px) {
+    html{
+      font-size: 50%;
+    }
+    .ImageCanvasConatiner{
+        justify-content: center;
+    }
+    .ImageCanvasConatinerRight{
+        justify-content: center;
+    }
+    .ImageCanvasConatinerLeft{
+        display: none;
+    }
+    .backicon{
+        height: 3rem;
+        margin-top: 1rem;
+        margin-right: 0rem !important;
+        }
+    
+ }
+ @media (max-width:   799px) {
+   .imageOnA{
+    font-size: 2.5rem;
+   }
+   .backicon{
+    height: 3rem;
+    margin-top: 1rem;
+    margin-right: 0rem !important;
+    }
+ }
+
+
+
+ 
